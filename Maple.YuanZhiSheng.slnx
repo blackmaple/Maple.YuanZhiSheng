@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="Maple.YuanZhiSheng.Metadata/Maple.YuanZhiSheng.Metadata.csproj" />
+  <Project Path="Maple.YuanZhiSheng.UI/Maple.YuanZhiSheng.UI.csproj" />
+  <Project Path="Maple.YuanZhiSheng.WebApi/Maple.YuanZhiSheng.WebApi.csproj" />
+</Solution>
