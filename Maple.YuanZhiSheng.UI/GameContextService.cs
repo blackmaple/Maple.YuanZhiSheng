@@ -1,10 +1,12 @@
 ﻿using Maple.Hook.Abstractions;
 using Maple.Hook.WinMsg;
+using Maple.ImGui.Backends.ImGuiCore;
 using Maple.MonoGameAssistant.Core;
 using Maple.MonoGameAssistant.DllProxyDobbyHook;
 using Maple.MonoGameAssistant.GameDTO;
 using Maple.MonoGameAssistant.Model;
 using Maple.UnityAssistant.Context;
+using Maple.UnityAssistant.Context.UnityMetadata;
 using Maple.UnityAssistant.Resource;
 using Maple.XScheduler;
 using Maple.YuanZhiSheng.Metadata;
@@ -34,8 +36,20 @@ public sealed class GameContextService(
         return new GameMetadataContext(Logger, searchService, RuntimeContext);
     }
 
-    protected override ValueTask LoadGameResourcesAsync()
+    public required GameResourceCache Cache { get; set; }
+
+    protected override UnityMetadataSearchService? LoadUnityMetadataSearchService()
     {
-        throw new NotImplementedException();
+        return base.LoadUnityMetadataSearchService();
+    }
+
+    public override void BlockInput(IImGuiUIView view)
+    {
+        base.BlockInput(view);
+    }
+
+    protected override async ValueTask LoadGameResourcesAsync()
+    {
+        this.Cache = await this.MonoTaskAsync(p => GameResourceCache.Create(p)).ConfigureAwait(false);
     }
 }

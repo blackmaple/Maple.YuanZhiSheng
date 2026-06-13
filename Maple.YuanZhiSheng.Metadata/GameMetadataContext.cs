@@ -7,6 +7,32 @@ using System.Text;
 namespace Maple.YuanZhiSheng.Metadata
 {
     [ContextParentMetadata<ContextMetadataCollector>(true)]
+    [ContextMemberMetadata<MC>]
+
+    [ContextMemberMetadata<WinManager>]
+    [ContextMemberMetadata<LocalizationManager>]
+
+    //人物26个属性值
+    [ContextMemberMetadata<AttributeData>]
+    //人物战斗19属性值
+    [ContextMemberMetadata<BattleAttributeData>]
+    //人物职业
+    [ContextMemberMetadata<CareerData>]
+    //人物称号
+    [ContextMemberMetadata<PlayerDesignationData>]
+    
+    //人物个性
+    [ContextMemberMetadata<PersonalityData>]
+    //人物课业
+    [ContextMemberMetadata<StudyData>]
+
+    //道具
+    [ContextMemberMetadata<ItemData>]
+    //技能
+    [ContextMemberMetadata<BattleSkillData>]
+    //技能大类
+    [ContextMemberMetadata<BattleSkillCategoryData>]
+
     public partial class GameMetadataContext
     {
     }

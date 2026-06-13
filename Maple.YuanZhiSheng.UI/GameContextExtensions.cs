@@ -14,7 +14,7 @@ namespace Maple.YuanZhiSheng.UI
         {
             D3D11GameContextExtensions.Run<GameContextService>(p =>
             {
-                p.GameName = "今古群侠传";
+                p.GameName = "缘绳启动!";
                 p.QQ = "QQ:75351663";
             },millisecondsTimeout:8000);
             return default;
