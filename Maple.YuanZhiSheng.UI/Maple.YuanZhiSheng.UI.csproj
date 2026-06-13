@@ -45,7 +45,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Maple.UnityAssistant.Context.D3D11" Version="0.26.609.2-rc" />
+		<PackageReference Include="Maple.UnityAssistant.Context.D3D11" Version="0.26.613.4-rc" />
 	</ItemGroup>
 
 	<ItemGroup>

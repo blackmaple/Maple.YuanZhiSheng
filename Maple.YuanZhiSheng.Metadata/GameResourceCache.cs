@@ -19,6 +19,7 @@ namespace Maple.YuanZhiSheng.Metadata
     {
         public static bool DEBUG { get; } = true;
         public GameMetadataContext Context { get; } = context;
+        public required GameInventoryResource[] InventoryResources { get; set; }
 
 
         public static GameResourceCache Create(GameMetadataContext context)
@@ -72,7 +73,11 @@ namespace Maple.YuanZhiSheng.Metadata
                 context.Log(reg);
             }
 
-            var cache = new GameResourceCache(context);
+            var cache = new GameResourceCache(context)
+            {
+                InventoryResources = inventoryDatas,
+
+            };
             return cache;
         }
 
@@ -89,8 +94,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 var id = att.ID;
                 // var idx = att.IDX;
-                var name = localizationManager.GET(att.NAME);
-                var desc = localizationManager.GET(att.DESCRIPTION);
+                var name = localizationManager.GetText(att.NAME);
+                var desc = localizationManager.GetText(att.DESCRIPTION);
                 yield return new GameObjectResource()
                 {
                     ObjectId = id.ToString()!,
@@ -98,8 +103,8 @@ namespace Maple.YuanZhiSheng.Metadata
                     //ImagePointer = default,
                     //DisplayImage = default,
                     DisplayCategory = nameof(AttributeData),
-                    DisplayDesc = desc.ToString(),
-                    DisplayName = name.ToString(),
+                    DisplayDesc = desc,
+                    DisplayName = name,
                 };
             }
         }
@@ -115,8 +120,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 var id = att.ID;
                 // var idx = att.IDX;
-                var name = localizationManager.GET(att.NAME);
-                var desc = localizationManager.GET(att.DESCRIPTION);
+                var name = localizationManager.GetText(att.NAME);
+                var desc = localizationManager.GetText(att.DESCRIPTION);
                 yield return new GameObjectResource()
                 {
                     ObjectId = id.ToString()!,
@@ -124,8 +129,8 @@ namespace Maple.YuanZhiSheng.Metadata
                     //ImagePointer = default,
                     //DisplayImage = default,
                     DisplayCategory = nameof(BattleAttributeData),
-                    DisplayDesc = desc.ToString(),
-                    DisplayName = name.ToString(),
+                    DisplayDesc = desc,
+                    DisplayName = name,
                 };
             }
         }
@@ -141,8 +146,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 var id = att.ID;
                 // var idx = att.IDX;
-                var name = localizationManager.GET(att.NAME);
-                //    var desc = localizationManager.GET(att.DESCRIPTION);
+                var name = localizationManager.GetText(att.NAME);
+                //  var desc = localizationManager.GetText(att.DESCRIPTION);
                 yield return new GameObjectResource()
                 {
                     ObjectId = id.ToString()!,
@@ -150,8 +155,8 @@ namespace Maple.YuanZhiSheng.Metadata
                     //ImagePointer = default,
                     //DisplayImage = default,
                     DisplayCategory = nameof(CareerData),
-                    //  DisplayDesc = desc.ToString(),
-                    DisplayName = name.ToString(),
+                    //  DisplayDesc = desc,
+                    DisplayName = name,
                 };
             }
 
@@ -168,8 +173,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 var id = att.ID;
                 // var idx = att.IDX;
-                var name = localizationManager.GET(att.NAME);
-                var desc = localizationManager.GET(att.DESCRIPTION);
+                var name = localizationManager.GetText(att.NAME);
+                var desc = localizationManager.GetText(att.DESCRIPTION);
                 yield return new GameObjectResource()
                 {
                     ObjectId = id.ToString()!,
@@ -177,8 +182,8 @@ namespace Maple.YuanZhiSheng.Metadata
                     //ImagePointer = default,
                     //DisplayImage = default,
                     DisplayCategory = nameof(PlayerDesignationData),
-                    DisplayDesc = desc.ToString(),
-                    DisplayName = name.ToString(),
+                    DisplayDesc = desc,
+                    DisplayName = name,
                 };
             }
 
@@ -195,8 +200,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 var id = att.ID;
                 // var idx = att.IDX;
-                var name = localizationManager.GET(att.NAME);
-                //     var desc = localizationManager.GET(att.DESCRIPTION);
+                var name = localizationManager.GetText(att.NAME);
+                //    var desc = localizationManager.GetText(att.DESCRIPTION);
                 yield return new GameObjectResource()
                 {
                     ObjectId = id.ToString()!,
@@ -204,13 +209,12 @@ namespace Maple.YuanZhiSheng.Metadata
                     //ImagePointer = default,
                     //DisplayImage = default,
                     DisplayCategory = nameof(PersonalityData),
-                    //    DisplayDesc = desc.ToString(),
-                    DisplayName = name.ToString(),
+                    //    DisplayDesc = desc ,
+                    DisplayName = name,
                 };
             }
 
         }
-
         static IEnumerable<GameInventoryResource> LoadAllItemData(Ptr_LocalizationManager localizationManager)
         {
             var list = ItemData.Ptr_ItemData.LIST;
@@ -223,8 +227,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 var id = att.ID;
                 // var idx = att.IDX;
-                var name = localizationManager.GET(att.ITEM_NAME);
-                var desc = localizationManager.GET(att.ITEM_DESCRIPTION);
+                var name = localizationManager.GetText(att.ITEM_NAME);
+                var desc = localizationManager.GetText(att.ITEM_DESCRIPTION);
                 var image = att.ITEM_ICON.ToString();
                 yield return new GameInventoryResource()
                 {
@@ -233,13 +237,12 @@ namespace Maple.YuanZhiSheng.Metadata
                     //ImagePointer = default,
                     DisplayImage = image,
                     DisplayCategory = nameof(ItemData),
-                    DisplayDesc = desc.ToString(),
-                    DisplayName = name.ToString(),
+                    DisplayDesc = desc,
+                    DisplayName = name,
                 };
             }
 
         }
-
         static IEnumerable<GameSkillResource> LoadAllBattleSkillData(Ptr_LocalizationManager localizationManager)
         {
             var list = BattleSkillData.Ptr_BattleSkillData.LIST;
@@ -252,8 +255,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 var id = att.ID;
                 // var idx = att.IDX;
-                var name = localizationManager.GET(att.NAME);
-                //   var desc = localizationManager.GET(att.DESCRIPTION);
+                var name = localizationManager.GetText(att.NAME);
+                //      var desc = localizationManager.GetText(att.DESCRIPTION);
                 //   var image = att.ICON.ToString();
                 yield return new GameSkillResource()
                 {
@@ -262,8 +265,8 @@ namespace Maple.YuanZhiSheng.Metadata
                     //ImagePointer = default,
                     //       DisplayImage = image,
                     DisplayCategory = nameof(BattleSkillData),
-                    //  DisplayDesc = desc.ToString(),
-                    DisplayName = name.ToString(),
+                    //  DisplayDesc = desc,
+                    DisplayName = name,
                 };
             }
 
@@ -274,7 +277,7 @@ namespace Maple.YuanZhiSheng.Metadata
     internal static class GameResourceCacheExtensions
     {
         public static void Log<T>(this GameMetadataContext context, T res)
-             where T : GameObjectDisplayDTO, IGameCommonReource
+             where T : GameObjectDisplayDTO, IGameCommonResource
         {
             if (!GameResourceCache.DEBUG)
             {
@@ -287,6 +290,17 @@ namespace Maple.YuanZhiSheng.Metadata
                 logger.LogInformation("[{Type}] Cate:{Cate}, Name:{Name}, Desc:{Desc} Pointer:{Pointer:X8}",
                     typeof(T).Name, res.DisplayCategory, res.DisplayName, res.DisplayDesc, res.ObjectPointer);
             }
+        }
+
+
+        public static string? GetText(this Ptr_LocalizationManager localizationManager, PMonoString key)
+        {
+            var text = localizationManager.GET(key);
+            if (text.AsReadOnlySpan().IsEmpty)
+            {
+                return key.ToString();
+            }
+            return text.ToString();
         }
     }
 }

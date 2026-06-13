@@ -6,6 +6,7 @@ using Maple.MonoGameAssistant.DllProxyDobbyHook;
 using Maple.MonoGameAssistant.GameDTO;
 using Maple.MonoGameAssistant.Model;
 using Maple.UnityAssistant.Context;
+using Maple.UnityAssistant.Context.UnityHook;
 using Maple.UnityAssistant.Context.UnityMetadata;
 using Maple.UnityAssistant.Resource;
 using Maple.XScheduler;
@@ -36,20 +37,45 @@ public sealed class GameContextService(
         return new GameMetadataContext(Logger, searchService, RuntimeContext);
     }
 
+    //public override void BlockInput(IImGuiUIView view)
+    //{
+    //    var unityMetadataSearchService = UnityMetadataSearchService;
+    //    if (unityMetadataSearchService != null)
+    //    {
+    //        UnityBlockInputService.Create(HookFactory, view, unityMetadataSearchService);
+    //    }
+    //}
+    //public override bool TryDrawLauncher(out nint nativePtr, out float u0, out float v0, out float u1, out float v1)
+    //{
+    //    nativePtr = default;
+    //    u0 = 0;
+    //    v0 = 0;
+    //    u1 = 0;
+    //    v1 = 0;
+    //    return false;
+    //}
+    //public override bool TryGetImageInfo(string? category, string objectId, string? image, out nint nativePtr, out float u0, out float v0, out float u1, out float v1)
+    //{
+    //    nativePtr = default;
+    //    u0 = 0;
+    //    v0 = 0;
+    //    u1 = 0;
+    //    v1 = 0;
+    //    return false;
+    //}
+    //public override void PlatformSetImeDataFn(bool on)
+    //{
+    //     base.PlatformSetImeDataFn(on);
+    //}
     public required GameResourceCache Cache { get; set; }
-
-    protected override UnityMetadataSearchService? LoadUnityMetadataSearchService()
-    {
-        return base.LoadUnityMetadataSearchService();
-    }
-
-    public override void BlockInput(IImGuiUIView view)
-    {
-        base.BlockInput(view);
-    }
 
     protected override async ValueTask LoadGameResourcesAsync()
     {
         this.Cache = await this.MonoTaskAsync(p => GameResourceCache.Create(p)).ConfigureAwait(false);
+    }
+
+    public override ValueTask<GameInventoryDisplayDTO[]> GetListInventoryDisplayAsync()
+    {
+        return  new ValueTask<GameInventoryDisplayDTO[]>(this.Cache.InventoryResources);
     }
 }
