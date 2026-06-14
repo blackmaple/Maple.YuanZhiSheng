@@ -1,3 +1,4 @@
+using Maple.MonoGameAssistant.Core;
 using Maple.MonoGameAssistant.MetadataCollections;
 
 namespace Maple.YuanZhiSheng.Metadata
@@ -54,7 +55,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <returns>class System.String</returns>
              
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<id>k__BackingField", "System.String")]
-            public partial nint ID { get; set; } 
+            public partial PMonoString ID { get; set; } 
 
 
             /// <summary>

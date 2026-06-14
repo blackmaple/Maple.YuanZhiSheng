@@ -287,8 +287,8 @@ namespace Maple.YuanZhiSheng.Metadata
             var logger = context.Logger;
             if (logger.IsEnabled(LogLevel.Information))
             {
-                logger.LogInformation("[{Type}] Cate:{Cate}, Name:{Name}, Desc:{Desc} Pointer:{Pointer:X8}",
-                    typeof(T).Name, res.DisplayCategory, res.DisplayName, res.DisplayDesc, res.ObjectPointer);
+                logger.LogInformation("[{Type}] Cate:{Cate}, Object:{Object}, Name:{Name}, Desc:{Desc} Pointer:{Pointer:X8}",
+                    typeof(T).Name, res.DisplayCategory, res.ObjectId, res.DisplayName, res.DisplayDesc, res.ObjectPointer);
             }
         }
 
