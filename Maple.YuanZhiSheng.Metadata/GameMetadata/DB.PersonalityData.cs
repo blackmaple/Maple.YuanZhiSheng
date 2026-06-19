@@ -93,10 +93,10 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<Category>k__BackingField", "System.String")]
-            public partial nint CATEGORY { get; set; } 
-*/
+            public partial PMonoString CATEGORY { get; set; } 
+
 
             /// <summary>
             /// 0x30 System.String <Args>k__BackingField
