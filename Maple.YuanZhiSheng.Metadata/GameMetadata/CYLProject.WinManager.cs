@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.Core;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -17,7 +19,7 @@ namespace Maple.YuanZhiSheng.Metadata
 
             public static implicit operator Ptr_WinManager(System.IntPtr ptr) => new Ptr_WinManager(ptr);
             public static implicit operator System.IntPtr(Ptr_WinManager ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_WinManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_WinManager ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -30,33 +32,33 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint ROOT_PATH = Assets/Prefabs/Main/UIRoot.prefab; 
+            /*
+           public const nint ROOT_PATH = Assets/Prefabs/Main/UIRoot.prefab; 
 */
             /// <summary>
             /// 0x0 System.String objectIsNullMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
+            /*
+           public const nint OBJECT_IS_NULL_MESSAGE = The Object you want to instantiate is null.; 
 */
             /// <summary>
             /// 0x0 System.String cloneDestroyedMessage
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
+            /*
+           public const nint CLONE_DESTROYED_MESSAGE = Instantiate failed because the clone was destroyed during creati; 
 */
             /// <summary>
             /// 0x0 UnityEngine.Vector2 ScreenSize
             /// struct ["UnityEngine.CoreModule.dll"."UnityEngine"."Vector2"]
             /// </summary>
             /// <returns>struct UnityEngine.Vector2</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ScreenSize", "UnityEngine.Vector2")]
-            public static partial UnityEngine.Vector2 SCREEN_SIZE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ScreenSize", "UnityEngine.Vector2")]
+           public static partial UnityEngine.Vector2 SCREEN_SIZE { get; set; } 
 */
 
             /// <summary>
@@ -64,19 +66,19 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["Assembly-CSharp.dll"."CYLProject"."WinManager"]
             /// </summary>
             /// <returns>class CYLProject.WinManager</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_Instance", "CYLProject.WinManager")]
-            public static partial nint _INSTANCE { get; set; } 
-*/
+            public static partial WinManager.Ptr_WinManager _INSTANCE { get; set; }
+
 
             /// <summary>
             /// 0x0 System.Int32 OffsetOfInstanceIDInCPlusPlusObject
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
-            public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OffsetOfInstanceIDInCPlusPlusObject", "System.Int32")]
+           public static partial System.Int32 OFFSET_OF_INSTANCE_ID_IN_C_PLUS_PLUS_OBJECT { get; set; } 
 */
 
             /// <summary>
@@ -84,9 +86,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["UnityEngine.CoreModule.dll"."UnityEngine"."Vector2Int"]
             /// </summary>
             /// <returns>struct UnityEngine.Vector2Int</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("SaveScreenShotSize", "UnityEngine.Vector2Int")]
-            public static partial UnityEngine.Vector2Int SAVE_SCREEN_SHOT_SIZE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("SaveScreenShotSize", "UnityEngine.Vector2Int")]
+           public static partial UnityEngine.Vector2Int SAVE_SCREEN_SHOT_SIZE { get; set; } 
 */
 
             /// <summary>
@@ -94,9 +96,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."IntPtr"]
             /// </summary>
             /// <returns>struct System.IntPtr</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
-            public partial System.IntPtr M_CACHED_PTR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CachedPtr", "System.IntPtr")]
+           public partial System.IntPtr M_CACHED_PTR { get; set; } 
 */
 
             /// <summary>
@@ -104,9 +106,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Threading"."CancellationTokenSource"]
             /// </summary>
             /// <returns>class System.Threading.CancellationTokenSource</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CancellationTokenSource", "System.Threading.CancellationTokenSource")]
-            public partial nint M_CANCELLATION_TOKEN_SOURCE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("m_CancellationTokenSource", "System.Threading.CancellationTokenSource")]
+           public partial nint M_CANCELLATION_TOKEN_SOURCE { get; set; } 
 */
 
             /// <summary>
@@ -114,9 +116,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Boolean"]
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<InitCompleted>k__BackingField", "System.Boolean")]
-            public partial System.Boolean INIT_COMPLETED { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<InitCompleted>k__BackingField", "System.Boolean")]
+           public partial System.Boolean INIT_COMPLETED { get; set; } 
 */
 
             /// <summary>
@@ -124,9 +126,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."Camera"]
             /// </summary>
             /// <returns>class UnityEngine.Camera</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<UICamera>k__BackingField", "UnityEngine.Camera")]
-            public partial nint UI_CAMERA { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<UICamera>k__BackingField", "UnityEngine.Camera")]
+           public partial nint UI_CAMERA { get; set; } 
 */
 
             /// <summary>
@@ -134,9 +136,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.UI.dll"."UnityEngine.EventSystems"."EventSystem"]
             /// </summary>
             /// <returns>class UnityEngine.EventSystems.EventSystem</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EventSystem>k__BackingField", "UnityEngine.EventSystems.EventSystem")]
-            public partial nint EVENT_SYSTEM { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EventSystem>k__BackingField", "UnityEngine.EventSystems.EventSystem")]
+           public partial nint EVENT_SYSTEM { get; set; } 
 */
 
             /// <summary>
@@ -144,9 +146,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["Unity.InputSystem.dll"."UnityEngine.InputSystem.UI"."InputSystemUIInputModule"]
             /// </summary>
             /// <returns>class UnityEngine.InputSystem.UI.InputSystemUIInputModule</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<UIInput>k__BackingField", "UnityEngine.InputSystem.UI.InputSystemUIInputModule")]
-            public partial nint UI_INPUT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<UIInput>k__BackingField", "UnityEngine.InputSystem.UI.InputSystemUIInputModule")]
+           public partial nint UI_INPUT { get; set; } 
 */
 
             /// <summary>
@@ -154,9 +156,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Boolean"]
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<UIInputEnable>k__BackingField", "System.Boolean")]
-            public partial System.Boolean UI_INPUT_ENABLE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<UIInputEnable>k__BackingField", "System.Boolean")]
+           public partial System.Boolean UI_INPUT_ENABLE { get; set; } 
 */
 
             /// <summary>
@@ -164,9 +166,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Boolean"]
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<OnlyMainMenuAndTutorialExtra>k__BackingField", "System.Boolean")]
-            public partial System.Boolean ONLY_MAIN_MENU_AND_TUTORIAL_EXTRA { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<OnlyMainMenuAndTutorialExtra>k__BackingField", "System.Boolean")]
+           public partial System.Boolean ONLY_MAIN_MENU_AND_TUTORIAL_EXTRA { get; set; } 
 */
 
             /// <summary>
@@ -174,9 +176,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// abstract class ["Assembly-CSharp.dll".""."BaseWin"]
             /// </summary>
             /// <returns>abstract class BaseWin</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<FocusWin>k__BackingField", "BaseWin")]
-            public partial nint FOCUS_WIN { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<FocusWin>k__BackingField", "BaseWin")]
+           public partial nint FOCUS_WIN { get; set; } 
 */
 
             /// <summary>
@@ -184,9 +186,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."Action"]
             /// </summary>
             /// <returns>class System.Action</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_onOpenWinListChange", "System.Action")]
-            public partial nint _ON_OPEN_WIN_LIST_CHANGE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_onOpenWinListChange", "System.Action")]
+           public partial nint _ON_OPEN_WIN_LIST_CHANGE { get; set; } 
 */
 
             /// <summary>
@@ -194,9 +196,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<BaseWin></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OpenWin", "System.Collections.Generic.List<BaseWin>")]
-            public partial nint OPEN_WIN { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("OpenWin", "System.Collections.Generic.List<BaseWin>")]
+           public partial nint OPEN_WIN { get; set; } 
 */
 
             /// <summary>
@@ -204,9 +206,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<BaseWin></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("PopFullScreenWinCache", "System.Collections.Generic.List<BaseWin>")]
-            public partial nint POP_FULL_SCREEN_WIN_CACHE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("PopFullScreenWinCache", "System.Collections.Generic.List<BaseWin>")]
+           public partial nint POP_FULL_SCREEN_WIN_CACHE { get; set; } 
 */
 
             /// <summary>
@@ -214,9 +216,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<BaseWin></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("toOpenList", "System.Collections.Generic.List<BaseWin>")]
-            public partial nint TO_OPEN_LIST { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("toOpenList", "System.Collections.Generic.List<BaseWin>")]
+           public partial nint TO_OPEN_LIST { get; set; } 
 */
 
             /// <summary>
@@ -224,9 +226,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."Dictionary`2"]
             /// </summary>
             /// <returns>class System.Collections.Generic.Dictionary<System.String , System.Boolean></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_inputModifier", "System.Collections.Generic.Dictionary<System.String,System.Boolean>")]
-            public partial nint _INPUT_MODIFIER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_inputModifier", "System.Collections.Generic.Dictionary<System.String,System.Boolean>")]
+           public partial nint _INPUT_MODIFIER { get; set; } 
 */
 
             /// <summary>
@@ -234,9 +236,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."Dictionary`2"]
             /// </summary>
             /// <returns>class System.Collections.Generic.Dictionary<CYLProject.WinManager.EWinSortingGroup , UnityEngine.Transform></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_sortingRoot", "System.Collections.Generic.Dictionary<CYLProject.WinManager.EWinSortingGroup,UnityEngine.Transform>")]
-            public partial nint _SORTING_ROOT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_sortingRoot", "System.Collections.Generic.Dictionary<CYLProject.WinManager.EWinSortingGroup,UnityEngine.Transform>")]
+           public partial nint _SORTING_ROOT { get; set; } 
 */
 
             /// <summary>
@@ -244,9 +246,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."Dictionary`2"]
             /// </summary>
             /// <returns>class System.Collections.Generic.Dictionary<System.Type , BasePanel></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_panelList", "System.Collections.Generic.Dictionary<System.Type,BasePanel>")]
-            public partial nint _PANEL_LIST { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_panelList", "System.Collections.Generic.Dictionary<System.Type,BasePanel>")]
+           public partial nint _PANEL_LIST { get; set; } 
 */
 
             /// <summary>
@@ -254,9 +256,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."Dictionary`2"]
             /// </summary>
             /// <returns>class System.Collections.Generic.Dictionary<System.Type , BaseWin></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_winDict", "System.Collections.Generic.Dictionary<System.Type,BaseWin>")]
-            public partial nint _WIN_DICT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_winDict", "System.Collections.Generic.Dictionary<System.Type,BaseWin>")]
+           public partial nint _WIN_DICT { get; set; } 
 */
 
             /// <summary>
@@ -264,9 +266,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."Transform"]
             /// </summary>
             /// <returns>class UnityEngine.Transform</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_root", "UnityEngine.Transform")]
-            public partial nint _ROOT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_root", "UnityEngine.Transform")]
+           public partial nint _ROOT { get; set; } 
 */
 
             /// <summary>
@@ -274,9 +276,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."Transform"]
             /// </summary>
             /// <returns>class UnityEngine.Transform</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_mask", "UnityEngine.Transform")]
-            public partial nint _MASK { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_mask", "UnityEngine.Transform")]
+           public partial nint _MASK { get; set; } 
 */
 
             /// <summary>
@@ -284,9 +286,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Boolean"]
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_lockOpen", "System.Boolean")]
-            public partial System.Boolean _LOCK_OPEN { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_lockOpen", "System.Boolean")]
+           public partial System.Boolean _LOCK_OPEN { get; set; } 
 */
 
             /// <summary>
@@ -294,9 +296,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_refreshIdx", "System.Int32")]
-            public partial System.Int32 _REFRESH_IDX { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_refreshIdx", "System.Int32")]
+           public partial System.Int32 _REFRESH_IDX { get; set; } 
 */
 
             /// <summary>
@@ -304,9 +306,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."RenderTexture"]
             /// </summary>
             /// <returns>class UnityEngine.RenderTexture</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_maskRT", "UnityEngine.RenderTexture")]
-            public partial nint _MASK_RT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_maskRT", "UnityEngine.RenderTexture")]
+           public partial nint _MASK_RT { get; set; } 
 */
 
             /// <summary>
@@ -314,9 +316,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."RenderTexture"]
             /// </summary>
             /// <returns>class UnityEngine.RenderTexture</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_screenShotRT", "UnityEngine.RenderTexture")]
-            public partial nint _SCREEN_SHOT_RT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_screenShotRT", "UnityEngine.RenderTexture")]
+           public partial nint _SCREEN_SHOT_RT { get; set; } 
 */
 
             /// <summary>
@@ -324,9 +326,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."Texture2D"]
             /// </summary>
             /// <returns>class UnityEngine.Texture2D</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_screenShotTex", "UnityEngine.Texture2D")]
-            public partial nint _SCREEN_SHOT_TEX { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_screenShotTex", "UnityEngine.Texture2D")]
+           public partial nint _SCREEN_SHOT_TEX { get; set; } 
 */
 
             /// <summary>
@@ -334,9 +336,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["Assembly-CSharp.dll".""."ObjectPool`2"]
             /// </summary>
             /// <returns>class ObjectPool<System.Type , BasePanel></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("objectPool", "ObjectPool<System.Type,BasePanel>")]
-            public partial nint OBJECT_POOL { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("objectPool", "ObjectPool<System.Type,BasePanel>")]
+           public partial nint OBJECT_POOL { get; set; } 
 */
 
             /// <summary>
@@ -344,9 +346,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Threading"."CancellationTokenSource"]
             /// </summary>
             /// <returns>class System.Threading.CancellationTokenSource</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_cts", "System.Threading.CancellationTokenSource")]
-            public partial nint _CTS { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_cts", "System.Threading.CancellationTokenSource")]
+           public partial nint _CTS { get; set; } 
 */
 
             /// <summary>
@@ -354,9 +356,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.UI.dll"."UnityEngine.UI"."Image"]
             /// </summary>
             /// <returns>class UnityEngine.UI.Image</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ImageClear>k__BackingField", "UnityEngine.UI.Image")]
-            public partial nint IMAGE_CLEAR { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ImageClear>k__BackingField", "UnityEngine.UI.Image")]
+           public partial nint IMAGE_CLEAR { get; set; } 
 */
         }
 
@@ -369,63 +371,63 @@ namespace Maple.YuanZhiSheng.Metadata
             /// static  System.Void .cctor()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".cctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public static partial void CCTOR(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".cctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public static partial void CCTOR(); 
 */
             /// <summary>
             ///   System.Void .ctor()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void CTOR(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void CTOR(); 
 */
             /// <summary>
             ///   System.Void add__onOpenWinListChange(System.Action value)
             /// </summary>
             /// <param name = "value">class System.Action</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("add__onOpenWinListChange", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action", 0)]
-            public partial void ADD__ON_OPEN_WIN_LIST_CHANGE(nint value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("add__onOpenWinListChange", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action", 0)]
+           public partial void ADD__ON_OPEN_WIN_LIST_CHANGE(nint value); 
 */
             /// <summary>
             ///   System.Void AddOpenWin(BaseWin w)
             /// </summary>
             /// <param name = "w">abstract class BaseWin</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("AddOpenWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
-            public partial void ADD_OPEN_WIN(nint w); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("AddOpenWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
+           public partial void ADD_OPEN_WIN(nint w); 
 */
             /// <summary>
             ///   System.Void CancelShowDetail()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("CancelShowDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void CANCEL_SHOW_DETAIL(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("CancelShowDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void CANCEL_SHOW_DETAIL(); 
 */
             /// <summary>
             ///   System.Void CheckToOpen()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("CheckToOpen", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void CHECK_TO_OPEN(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("CheckToOpen", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void CHECK_TO_OPEN(); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask Close(System.Boolean openFullWin)
             /// </summary>
             /// <param name = "openFullWin">struct System.Boolean</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Close", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
-            public partial Cysharp.Threading.Tasks.UniTask CLOSE(System.Boolean openFullWin); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Close", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
+           public partial Cysharp.Threading.Tasks.UniTask CLOSE(System.Boolean openFullWin); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask Close(BaseWin w, System.Boolean openFullWin)
@@ -433,167 +435,167 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "w">abstract class BaseWin</param>
             /// <param name = "openFullWin">struct System.Boolean</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Close", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
-            public partial Cysharp.Threading.Tasks.UniTask CLOSE(nint w, System.Boolean openFullWin); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Close", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
+           public partial Cysharp.Threading.Tasks.UniTask CLOSE(nint w, System.Boolean openFullWin); 
 */
             /// <summary>
             ///   System.Void CloseAll(System.Boolean keepPassWin)
             /// </summary>
             /// <param name = "keepPassWin">struct System.Boolean</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("CloseAll", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
-            public partial void CLOSE_ALL(System.Boolean keepPassWin); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("CloseAll", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
+           public partial void CLOSE_ALL(System.Boolean keepPassWin); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask DestroyWin()
             /// </summary>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("DestroyWin", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial Cysharp.Threading.Tasks.UniTask DESTROY_WIN(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("DestroyWin", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial Cysharp.Threading.Tasks.UniTask DESTROY_WIN(); 
 */
             /// <summary>
             ///   System.Void DestroyWin(BaseWin w)
             /// </summary>
             /// <param name = "w">abstract class BaseWin</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("DestroyWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
-            public partial void DESTROY_WIN(nint w); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("DestroyWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
+           public partial void DESTROY_WIN(nint w); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask<T> Get()
             /// </summary>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask<T></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Get", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial Cysharp.Threading.Tasks.UniTask<T> GET(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Get", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial Cysharp.Threading.Tasks.UniTask<T> GET(); 
 */
             /// <summary>
             ///   UnityEngine.EventSystems.EventSystem get_EventSystem()
             /// </summary>
             /// <returns>class UnityEngine.EventSystems.EventSystem</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_EventSystem", "UnityEngine.EventSystems.EventSystem", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_EVENT_SYSTEM(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_EventSystem", "UnityEngine.EventSystems.EventSystem", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint GET_EVENT_SYSTEM(); 
 */
             /// <summary>
             ///   BaseWin get_FocusWin()
             /// </summary>
             /// <returns>abstract class BaseWin</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_FocusWin", "BaseWin", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_FOCUS_WIN(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_FocusWin", "BaseWin", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint GET_FOCUS_WIN(); 
 */
             /// <summary>
             ///   UnityEngine.UI.Image get_ImageClear()
             /// </summary>
             /// <returns>class UnityEngine.UI.Image</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_ImageClear", "UnityEngine.UI.Image", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_IMAGE_CLEAR(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_ImageClear", "UnityEngine.UI.Image", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint GET_IMAGE_CLEAR(); 
 */
             /// <summary>
             ///   System.Boolean get_OnlyMainMenuAndTutorialExtra()
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_OnlyMainMenuAndTutorialExtra", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial System.Boolean GET_ONLY_MAIN_MENU_AND_TUTORIAL_EXTRA(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_OnlyMainMenuAndTutorialExtra", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial System.Boolean GET_ONLY_MAIN_MENU_AND_TUTORIAL_EXTRA(); 
 */
             /// <summary>
             ///   UnityEngine.Camera get_UICamera()
             /// </summary>
             /// <returns>class UnityEngine.Camera</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_UICamera", "UnityEngine.Camera", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_UI_CAMERA(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_UICamera", "UnityEngine.Camera", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint GET_UI_CAMERA(); 
 */
             /// <summary>
             ///   UnityEngine.InputSystem.UI.InputSystemUIInputModule get_UIInput()
             /// </summary>
             /// <returns>class UnityEngine.InputSystem.UI.InputSystemUIInputModule</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_UIInput", "UnityEngine.InputSystem.UI.InputSystemUIInputModule", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_UI_INPUT(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_UIInput", "UnityEngine.InputSystem.UI.InputSystemUIInputModule", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint GET_UI_INPUT(); 
 */
             /// <summary>
             ///   System.Boolean get_UIInputEnable()
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_UIInputEnable", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial System.Boolean GET_UI_INPUT_ENABLE(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("get_UIInputEnable", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial System.Boolean GET_UI_INPUT_ENABLE(); 
 */
             /// <summary>
             ///   UnityEngine.RenderTexture GetCameraRT()
             /// </summary>
             /// <returns>class UnityEngine.RenderTexture</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetCameraRT", "UnityEngine.RenderTexture", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_CAMERA_RT(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetCameraRT", "UnityEngine.RenderTexture", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint GET_CAMERA_RT(); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask<T> GetPanel()
             /// </summary>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask<T></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetPanel", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial Cysharp.Threading.Tasks.UniTask<T> GET_PANEL(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetPanel", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial Cysharp.Threading.Tasks.UniTask<T> GET_PANEL(); 
 */
             /// <summary>
             ///   System.Byte[] GetScreenShotData()
             /// </summary>
             /// <returns>class System.Byte[]</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetScreenShotData", "System.Byte[]", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial nint GET_SCREEN_SHOT_DATA(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetScreenShotData", "System.Byte[]", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial nint GET_SCREEN_SHOT_DATA(); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask<T> HidePanel()
             /// </summary>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask<T></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("HidePanel", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial Cysharp.Threading.Tasks.UniTask<T> HIDE_PANEL(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("HidePanel", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial Cysharp.Threading.Tasks.UniTask<T> HIDE_PANEL(); 
 */
             /// <summary>
             ///   System.Void OnDisable()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnDisable", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void ON_DISABLE(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnDisable", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void ON_DISABLE(); 
 */
             /// <summary>
             ///   System.Void OnDispose()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnDispose", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void ON_DISPOSE(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnDispose", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void ON_DISPOSE(); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask OnInitAsync()
             /// </summary>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnInitAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial Cysharp.Threading.Tasks.UniTask ON_INIT_ASYNC(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnInitAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial Cysharp.Threading.Tasks.UniTask ON_INIT_ASYNC(); 
 */
             /// <summary>
             ///   System.Void OnUpdate()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnUpdate", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void ON_UPDATE(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("OnUpdate", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void ON_UPDATE(); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask Open(BaseWin ret, System.Boolean isFullScreen)
@@ -601,137 +603,137 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "ret">abstract class BaseWin</param>
             /// <param name = "isFullScreen">struct System.Boolean</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Open", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
-            public partial Cysharp.Threading.Tasks.UniTask OPEN(nint ret, System.Boolean isFullScreen); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Open", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
+           public partial Cysharp.Threading.Tasks.UniTask OPEN(nint ret, System.Boolean isFullScreen); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask<T> Open(System.Boolean isFullScreen)
             /// </summary>
             /// <param name = "isFullScreen">struct System.Boolean</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask<T></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Open", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
-            public partial Cysharp.Threading.Tasks.UniTask<T> OPEN(System.Boolean isFullScreen); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Open", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
+           public partial Cysharp.Threading.Tasks.UniTask<T> OPEN(System.Boolean isFullScreen); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask<T> Pop(System.Boolean front)
             /// </summary>
             /// <param name = "front">struct System.Boolean</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask<T></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Pop", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
-            public partial Cysharp.Threading.Tasks.UniTask<T> POP(System.Boolean front); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Pop", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
+           public partial Cysharp.Threading.Tasks.UniTask<T> POP(System.Boolean front); 
 */
             /// <summary>
             ///   System.Void Preload()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Preload", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void PRELOAD(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("Preload", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void PRELOAD(); 
 */
             /// <summary>
             ///   System.Void RefreshWinFocus()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("RefreshWinFocus", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void REFRESH_WIN_FOCUS(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("RefreshWinFocus", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void REFRESH_WIN_FOCUS(); 
 */
             /// <summary>
             ///   System.Void remove__onOpenWinListChange(System.Action value)
             /// </summary>
             /// <param name = "value">class System.Action</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("remove__onOpenWinListChange", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action", 0)]
-            public partial void REMOVE__ON_OPEN_WIN_LIST_CHANGE(nint value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("remove__onOpenWinListChange", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action", 0)]
+           public partial void REMOVE__ON_OPEN_WIN_LIST_CHANGE(nint value); 
 */
             /// <summary>
             ///   System.Void RemoveOpenWin(BaseWin w)
             /// </summary>
             /// <param name = "w">abstract class BaseWin</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("RemoveOpenWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
-            public partial void REMOVE_OPEN_WIN(nint w); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("RemoveOpenWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
+           public partial void REMOVE_OPEN_WIN(nint w); 
 */
             /// <summary>
             ///   System.Void set_EventSystem(UnityEngine.EventSystems.EventSystem value)
             /// </summary>
             /// <param name = "value">class UnityEngine.EventSystems.EventSystem</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_EventSystem", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.EventSystems.EventSystem", 0)]
-            public partial void SET_EVENT_SYSTEM(nint value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_EventSystem", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.EventSystems.EventSystem", 0)]
+           public partial void SET_EVENT_SYSTEM(nint value); 
 */
             /// <summary>
             ///   System.Void set_FocusWin(BaseWin value)
             /// </summary>
             /// <param name = "value">abstract class BaseWin</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_FocusWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
-            public partial void SET_FOCUS_WIN(nint value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_FocusWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("BaseWin", 0)]
+           public partial void SET_FOCUS_WIN(nint value); 
 */
             /// <summary>
             ///   System.Void set_ImageClear(UnityEngine.UI.Image value)
             /// </summary>
             /// <param name = "value">class UnityEngine.UI.Image</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_ImageClear", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.UI.Image", 0)]
-            public partial void SET_IMAGE_CLEAR(nint value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_ImageClear", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.UI.Image", 0)]
+           public partial void SET_IMAGE_CLEAR(nint value); 
 */
             /// <summary>
             ///   System.Void set_OnlyMainMenuAndTutorialExtra(System.Boolean value)
             /// </summary>
             /// <param name = "value">struct System.Boolean</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_OnlyMainMenuAndTutorialExtra", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
-            public partial void SET_ONLY_MAIN_MENU_AND_TUTORIAL_EXTRA(System.Boolean value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_OnlyMainMenuAndTutorialExtra", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
+           public partial void SET_ONLY_MAIN_MENU_AND_TUTORIAL_EXTRA(System.Boolean value); 
 */
             /// <summary>
             ///   System.Void set_UICamera(UnityEngine.Camera value)
             /// </summary>
             /// <param name = "value">class UnityEngine.Camera</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_UICamera", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.Camera", 0)]
-            public partial void SET_UI_CAMERA(nint value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_UICamera", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.Camera", 0)]
+           public partial void SET_UI_CAMERA(nint value); 
 */
             /// <summary>
             ///   System.Void set_UIInput(UnityEngine.InputSystem.UI.InputSystemUIInputModule value)
             /// </summary>
             /// <param name = "value">class UnityEngine.InputSystem.UI.InputSystemUIInputModule</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_UIInput", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.InputSystem.UI.InputSystemUIInputModule", 0)]
-            public partial void SET_UI_INPUT(nint value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_UIInput", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.InputSystem.UI.InputSystemUIInputModule", 0)]
+           public partial void SET_UI_INPUT(nint value); 
 */
             /// <summary>
             ///   System.Void set_UIInputEnable(System.Boolean value)
             /// </summary>
             /// <param name = "value">struct System.Boolean</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_UIInputEnable", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
-            public partial void SET_UI_INPUT_ENABLE(System.Boolean value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("set_UIInputEnable", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 0)]
+           public partial void SET_UI_INPUT_ENABLE(System.Boolean value); 
 */
             /// <summary>
             ///   System.Void SetImageSpriteAsync(UnityEngine.UI.Image image, System.String path, System.Threading.CancellationTokenSource cts, System.Boolean native, System.Boolean show)
@@ -742,14 +744,14 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "native">struct System.Boolean</param>
             /// <param name = "show">struct System.Boolean</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("SetImageSpriteAsync", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.UI.Image", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Threading.CancellationTokenSource", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 3)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 4)]
-            public partial void SET_IMAGE_SPRITE_ASYNC(nint image, nint path, nint cts, System.Boolean native, System.Boolean show); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("SetImageSpriteAsync", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.UI.Image", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Threading.CancellationTokenSource", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 3)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 4)]
+           public partial void SET_IMAGE_SPRITE_ASYNC(nint image, nint path, nint cts, System.Boolean native, System.Boolean show); 
 */
             /// <summary>
             ///   System.Void SetInputState(System.String key, System.Boolean value)
@@ -757,11 +759,11 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "key">class System.String</param>
             /// <param name = "value">struct System.Boolean</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("SetInputState", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
-            public partial void SET_INPUT_STATE(nint key, System.Boolean value); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("SetInputState", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
+           public partial void SET_INPUT_STATE(nint key, System.Boolean value); 
 */
             /// <summary>
             ///   System.Void ShowAsk(System.String title, System.String tip, System.Action<System.Boolean> callback)
@@ -770,12 +772,12 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "tip">class System.String</param>
             /// <param name = "callback">class System.Action<System.Boolean></param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAsk", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean>", 2)]
-            public partial void SHOW_ASK(nint title, nint tip, nint callback); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAsk", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean>", 2)]
+           public partial void SHOW_ASK(nint title, nint tip, nint callback); 
 */
             /// <summary>
             ///   System.Void ShowAsk(System.String title, System.String tip, System.Int32 cap, System.Action<System.Boolean , System.Int32> callback)
@@ -785,13 +787,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "cap">struct System.Int32</param>
             /// <param name = "callback">class System.Action<System.Boolean , System.Int32></param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAsk", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean,System.Int32>", 3)]
-            public partial void SHOW_ASK(nint title, nint tip, System.Int32 cap, nint callback); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAsk", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean,System.Int32>", 3)]
+           public partial void SHOW_ASK(nint title, nint tip, System.Int32 cap, nint callback); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowAskAsync(System.String title, System.String tip, System.Action<System.Boolean> callback)
@@ -800,12 +802,12 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "tip">class System.String</param>
             /// <param name = "callback">class System.Action<System.Boolean></param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAskAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean>", 2)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_ASK_ASYNC(nint title, nint tip, nint callback); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAskAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean>", 2)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_ASK_ASYNC(nint title, nint tip, nint callback); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowAskAsync(System.String title, System.String tip, System.Int32 cap, System.Action<System.Boolean , System.Int32> callback)
@@ -815,23 +817,23 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "cap">struct System.Int32</param>
             /// <param name = "callback">class System.Action<System.Boolean , System.Int32></param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAskAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean,System.Int32>", 3)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_ASK_ASYNC(nint title, nint tip, System.Int32 cap, nint callback); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowAskAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action<System.Boolean,System.Int32>", 3)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_ASK_ASYNC(nint title, nint tip, System.Int32 cap, nint callback); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowCirclePass(System.Action curTask)
             /// </summary>
             /// <param name = "curTask">class System.Action</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowCirclePass", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action", 0)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_CIRCLE_PASS(nint curTask); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowCirclePass", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Action", 0)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_CIRCLE_PASS(nint curTask); 
 */
             /// <summary>
             ///   System.Void ShowDescDetail(UnityEngine.RectTransform rect, System.String desc, System.Boolean limitWidth, CYLProject.DetailAnchor anchor)
@@ -841,13 +843,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "limitWidth">struct System.Boolean</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial void SHOW_DESC_DETAIL(nint rect, nint desc, System.Boolean limitWidth, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial void SHOW_DESC_DETAIL(nint rect, nint desc, System.Boolean limitWidth, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowDescDetailAsync(UnityEngine.RectTransform rect, System.String desc, System.Boolean limitWidth, CYLProject.DetailAnchor anchor)
@@ -857,13 +859,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "limitWidth">struct System.Boolean</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_DESC_DETAIL_ASYNC(nint rect, nint desc, System.Boolean limitWidth, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_DESC_DETAIL_ASYNC(nint rect, nint desc, System.Boolean limitWidth, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   System.Void ShowDescriptionDetail(UnityEngine.RectTransform rect, System.String desc, System.String desc1, CYLProject.DetailAnchor anchor)
@@ -873,13 +875,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "desc1">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescriptionDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial void SHOW_DESCRIPTION_DETAIL(nint rect, nint desc, nint desc1, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescriptionDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial void SHOW_DESCRIPTION_DETAIL(nint rect, nint desc, nint desc1, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowDescriptionDetailAsync(UnityEngine.RectTransform rect, System.String desc, System.String desc1, CYLProject.DetailAnchor anchor)
@@ -889,13 +891,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "desc1">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescriptionDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_DESCRIPTION_DETAIL_ASYNC(nint rect, nint desc, nint desc1, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowDescriptionDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_DESCRIPTION_DETAIL_ASYNC(nint rect, nint desc, nint desc1, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   System.Void ShowItemDetail(UnityEngine.RectTransform rect, System.String itemId, System.String saveId, CYLProject.DetailAnchor anchor)
@@ -905,13 +907,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "saveId">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowItemDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial void SHOW_ITEM_DETAIL(nint rect, nint itemId, nint saveId, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowItemDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial void SHOW_ITEM_DETAIL(nint rect, nint itemId, nint saveId, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowItemDetailAsync(UnityEngine.RectTransform rect, System.String itemId, System.String saveId, CYLProject.DetailAnchor anchor)
@@ -921,13 +923,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "saveId">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowItemDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_ITEM_DETAIL_ASYNC(nint rect, nint itemId, nint saveId, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowItemDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_ITEM_DETAIL_ASYNC(nint rect, nint itemId, nint saveId, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   System.Void ShowNameDescDetail(UnityEngine.RectTransform rect, System.String name, System.String desc, CYLProject.DetailAnchor anchor)
@@ -937,13 +939,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "desc">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowNameDescDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial void SHOW_NAME_DESC_DETAIL(nint rect, nint name, nint desc, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowNameDescDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial void SHOW_NAME_DESC_DETAIL(nint rect, nint name, nint desc, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowNameDescDetailAsync(UnityEngine.RectTransform rect, System.String name, System.String desc, CYLProject.DetailAnchor anchor)
@@ -953,31 +955,31 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "desc">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowNameDescDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_NAME_DESC_DETAIL_ASYNC(nint rect, nint name, nint desc, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowNameDescDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 3)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_NAME_DESC_DETAIL_ASYNC(nint rect, nint name, nint desc, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask<T> ShowPanel()
             /// </summary>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask<T></returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPanel", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial Cysharp.Threading.Tasks.UniTask<T> SHOW_PANEL(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPanel", "Cysharp.Threading.Tasks.UniTask<T>", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial Cysharp.Threading.Tasks.UniTask<T> SHOW_PANEL(); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowPass(System.Func<Cysharp.Threading.Tasks.UniTask> curTask)
             /// </summary>
             /// <param name = "curTask">class System.Func<Cysharp.Threading.Tasks.UniTask></param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPass", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Func<Cysharp.Threading.Tasks.UniTask>", 0)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_PASS(nint curTask); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPass", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Func<Cysharp.Threading.Tasks.UniTask>", 0)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_PASS(nint curTask); 
 */
             /// <summary>
             ///   System.Void ShowPlayerTalentDetail(UnityEngine.RectTransform rect, System.String talentId, CYLProject.DetailAnchor anchor)
@@ -986,12 +988,12 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "talentId">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPlayerTalentDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 2)]
-            public partial void SHOW_PLAYER_TALENT_DETAIL(nint rect, nint talentId, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPlayerTalentDetail", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 2)]
+           public partial void SHOW_PLAYER_TALENT_DETAIL(nint rect, nint talentId, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowPlayerTalentDetailAsync(UnityEngine.RectTransform rect, System.String talentId, CYLProject.DetailAnchor anchor)
@@ -1000,12 +1002,12 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "talentId">class System.String</param>
             /// <param name = "anchor">enum CYLProject.DetailAnchor</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPlayerTalentDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 2)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_PLAYER_TALENT_DETAIL_ASYNC(nint rect, nint talentId, CYLProject.DetailAnchor anchor); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowPlayerTalentDetailAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("UnityEngine.RectTransform", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.DetailAnchor", 2)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_PLAYER_TALENT_DETAIL_ASYNC(nint rect, nint talentId, CYLProject.DetailAnchor anchor); 
 */
             /// <summary>
             ///   System.Void ShowTip(CYLProject.TipType type, System.String desc, System.String audioId)
@@ -1014,13 +1016,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "desc">class System.String</param>
             /// <param name = "audioId">class System.String</param>
             /// <returns>struct System.Void</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTip", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            public partial void SHOW_TIP(CYLProject.TipType type, nint desc, nint audioId); 
-*/
+            public partial void SHOW_TIP(TipType type, PMonoString desc, nint audioId = default);
+
             /// <summary>
             ///   System.Void ShowTip(CYLProject.TipType type, System.String id, System.Int32 amount, System.Int32 resType)
             /// </summary>
@@ -1029,13 +1031,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "amount">struct System.Int32</param>
             /// <param name = "resType">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTip", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 3)]
-            public partial void SHOW_TIP(CYLProject.TipType type, nint id, System.Int32 amount, System.Int32 resType); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTip", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 3)]
+           public partial void SHOW_TIP(CYLProject.TipType type, nint id, System.Int32 amount, System.Int32 resType); 
 */
             /// <summary>
             ///   System.Void ShowTip(CYLProject.TipType type, System.String id, System.Single fill, System.Single progress)
@@ -1045,13 +1047,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "fill">struct System.Single</param>
             /// <param name = "progress">struct System.Single</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTip", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 3)]
-            public partial void SHOW_TIP(CYLProject.TipType type, nint id, System.Single fill, System.Single progress); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTip", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 3)]
+           public partial void SHOW_TIP(CYLProject.TipType type, nint id, System.Single fill, System.Single progress); 
 */
             /// <summary>
             ///   System.Void ShowTip(CYLProject.TipType type, System.String id, System.String desc, System.String audioId)
@@ -1061,13 +1063,13 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "desc">class System.String</param>
             /// <param name = "audioId">class System.String</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTip", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 3)]
-            public partial void SHOW_TIP(CYLProject.TipType type, nint id, nint desc, nint audioId); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTip", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 3)]
+           public partial void SHOW_TIP(CYLProject.TipType type, nint id, nint desc, nint audioId); 
 */
             /// <summary>
             ///   Cysharp.Threading.Tasks.UniTask ShowTipAsync(CYLProject.TipType type, System.String id, System.String arg, System.Int32 amount, System.Int32 resType, System.Single fill, System.Single progress, System.String audioId)
@@ -1081,33 +1083,33 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "progress">struct System.Single</param>
             /// <param name = "audioId">class System.String</param>
             /// <returns>struct Cysharp.Threading.Tasks.UniTask</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTipAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 3)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 4)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 5)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 6)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 7)]
-            public partial Cysharp.Threading.Tasks.UniTask SHOW_TIP_ASYNC(CYLProject.TipType type, nint id, nint arg, System.Int32 amount, System.Int32 resType, System.Single fill, System.Single progress, nint audioId); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ShowTipAsync", "Cysharp.Threading.Tasks.UniTask", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("CYLProject.TipType", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 3)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 4)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 5)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Single", 6)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 7)]
+           public partial Cysharp.Threading.Tasks.UniTask SHOW_TIP_ASYNC(CYLProject.TipType type, nint id, nint arg, System.Int32 amount, System.Int32 resType, System.Single fill, System.Single progress, nint audioId); 
 */
             /// <summary>
             ///   System.Void UICameraAddToMain()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("UICameraAddToMain", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void UI_CAMERA_ADD_TO_MAIN(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("UICameraAddToMain", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void UI_CAMERA_ADD_TO_MAIN(); 
 */
             /// <summary>
             ///   System.Void UpdateAllWin()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("UpdateAllWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void UPDATE_ALL_WIN(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("UpdateAllWin", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void UPDATE_ALL_WIN(); 
 */
         }
 

@@ -72,10 +72,18 @@ public sealed class GameContextService(
     protected override async ValueTask LoadGameResourcesAsync()
     {
         this.Cache = await this.MonoTaskAsync(p => GameResourceCache.Create(p)).ConfigureAwait(false);
+        await this.ShowMsgAsync("游戏资源加载完成").ConfigureAwait(false);
+        return;
     }
 
     public override ValueTask<GameInventoryDisplayDTO[]> GetListInventoryDisplayAsync()
     {
-        return  new ValueTask<GameInventoryDisplayDTO[]>(this.Cache.InventoryResources);
+        return new ValueTask<GameInventoryDisplayDTO[]>(this.Cache.InventoryResources);
+    }
+
+
+    private Task<bool> ShowMsgAsync(string msg)
+    {
+        return this.XTaskAsync((msg), static (p, msg) => p.Cache.ShowMsg(msg));
     }
 }

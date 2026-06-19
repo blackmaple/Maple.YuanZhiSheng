@@ -20,7 +20,7 @@ namespace Maple.YuanZhiSheng.Metadata
         public static bool DEBUG { get; } = true;
         public GameMetadataContext Context { get; } = context;
         public required GameInventoryResource[] InventoryResources { get; set; }
-
+        public required WinManager.Ptr_WinManager Ptr_WinManager { get; set; }
 
         public static GameResourceCache Create(GameMetadataContext context)
         {
@@ -76,9 +76,20 @@ namespace Maple.YuanZhiSheng.Metadata
             var cache = new GameResourceCache(context)
             {
                 InventoryResources = inventoryDatas,
+                Ptr_WinManager = WinManager.Ptr_WinManager._INSTANCE
 
             };
             return cache;
+        }
+
+
+        public void ShowMsg(string msg)
+        {
+            var pMsg = this.Context.TPin(msg, out var gc);
+            using (gc)
+            {
+                this.Ptr_WinManager.SHOW_TIP(TipType.Message, pMsg);
+            }
         }
 
 

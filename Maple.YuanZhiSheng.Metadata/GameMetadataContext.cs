@@ -7,9 +7,11 @@ using System.Text;
 namespace Maple.YuanZhiSheng.Metadata
 {
     [ContextParentMetadata<ContextMetadataCollector>(true)]
+    //管理器
     [ContextMemberMetadata<MC>]
-
+    //窗口
     [ContextMemberMetadata<WinManager>]
+    //本地化
     [ContextMemberMetadata<LocalizationManager>]
 
     //人物26个属性值
