@@ -68,17 +68,79 @@ public sealed class GameContextService(
     //     base.PlatformSetImeDataFn(on);
     //}
     public required GameResourceCache Cache { get; set; }
-
+    public required GameSwitchDisplayDTO[] GameSwitches { get; set; }
     protected override async ValueTask LoadGameResourcesAsync()
     {
         this.Cache = await this.MonoTaskAsync(p => GameResourceCache.Create(p)).ConfigureAwait(false);
+        this.GameSwitches = [.. this.LoadSwitches()];
         await this.ShowMsgAsync("游戏资源加载完成").ConfigureAwait(false);
         return;
+    }
+
+
+
+    private IEnumerable<GameSwitchDisplayDTO> LoadSwitches()
+    {
+        yield return new GameSwitchDisplayDTO() { ObjectId = EnumGameSwitchCategory.Test.ToString(), DisplayName = "Test", DisplayDesc = "Test", UIType = (int)EnumGameSwitchUIType.Button };
+    }
+    public override ValueTask<GameSwitchDisplayDTO[]> GetListSwitchDisplayAsync()
+    {
+        return ValueTask.FromResult(this.GameSwitches);
+    }
+    public override async ValueTask<GameSwitchDisplayDTO> UpdateSwitchDisplayAsync(GameSwitchModifyDTO gameSwitchModify)
+    {
+        var first = GameSwitches.Where(p => p.ObjectId == gameSwitchModify.SwitchObjectId).FirstOrDefault();
+        if (!Enum.TryParse<EnumGameSwitchCategory>(first?.ObjectId, out var category))
+        {
+            return GameException.Throw<GameSwitchDisplayDTO>($"NOT FOUND:{gameSwitchModify.SwitchObjectId}");
+        }
+        switch (category)
+        {
+            case EnumGameSwitchCategory.Test:
+                {
+                    var gameEnvService = await this.LoadGameEnvServiceAsync().ConfigureAwait(false);
+                    await this.MTaskAsync(gameEnvService, (p, env) => env.LogModel()).ConfigureAwait(false);
+                }
+                break;
+        }
+        return first;
+    }
+
+
+    public override ValueTask<GameCurrencyDisplayDTO[]> GetListCurrencyDisplayAsync()
+    {
+        return new ValueTask<GameCurrencyDisplayDTO[]>(this.Cache.CurrencyResources);
+    }
+    public override async ValueTask<GameCurrencyInfoDTO> GetCurrencyInfoAsync(GameCurrencyObjectDTO currencyObjectDTO)
+    {
+        var gameEnv = await this.LoadGameEnvServiceThrowIfNotLoadedAsync().ConfigureAwait(false);
+        return await this.MTaskAsync((gameEnv, currencyObjectDTO), (p, args) => args.gameEnv.GetCurrencyInfo(args.currencyObjectDTO)).ConfigureAwait(false);
+    }
+    public override async ValueTask<GameCurrencyInfoDTO> UpdateCurrencyInfoAsync(GameCurrencyModifyDTO currencyModifyDTO)
+    {
+        var gameEnv = await this.LoadGameEnvServiceThrowIfNotLoadedAsync().ConfigureAwait(false);
+        return await this.MTaskAsync((gameEnv, currencyModifyDTO), (p, args) => args.gameEnv.UpdateCurrencyInfo(args.currencyModifyDTO)).ConfigureAwait(false);
     }
 
     public override ValueTask<GameInventoryDisplayDTO[]> GetListInventoryDisplayAsync()
     {
         return new ValueTask<GameInventoryDisplayDTO[]>(this.Cache.InventoryResources);
+    }
+    public override async ValueTask<GameInventoryInfoDTO> GetInventoryInfoAsync(GameInventoryObjectDTO inventoryObjectDTO)
+    {
+        var gameEnv = await this.LoadGameEnvServiceThrowIfNotLoadedAsync().ConfigureAwait(false);
+        return await this.MTaskAsync((gameEnv, inventoryObjectDTO), (p, args) => args.gameEnv.GetInventoryInfo(args.inventoryObjectDTO)).ConfigureAwait(false);
+    }
+    public override async ValueTask<GameInventoryInfoDTO> UpdateInventoryInfoAsync(GameInventoryModifyDTO inventoryModifyDTO)
+    {
+        var gameEnv = await this.LoadGameEnvServiceThrowIfNotLoadedAsync().ConfigureAwait(false);
+        return await this.MTaskAsync((gameEnv, inventoryModifyDTO), (p, args) => args.gameEnv.UpdateInventoryInfo(args.inventoryModifyDTO)).ConfigureAwait(false);
+
+    }
+
+    public override ValueTask<GameCharacterDisplayDTO[]> GetListCharacterDisplayAsync()
+    {
+        return new ValueTask<GameCharacterDisplayDTO[]>(this.Cache.CharacterResources);
     }
 
 
@@ -86,4 +148,23 @@ public sealed class GameContextService(
     {
         return this.XTaskAsync((msg), static (p, msg) => p.Cache.ShowMsg(msg));
     }
+
+    private Task<GameEnvService> LoadGameEnvServiceThrowIfNotLoadedAsync()
+    {
+        return this.MTaskAsync(this.Cache, (p, cache) => GameEnvService.CreateThrowIfNotLoaded(cache));
+    }
+
+    private Task<GameEnvService> LoadGameEnvServiceAsync()
+    {
+        return this.MTaskAsync(this.Cache, (p, cache) => GameEnvService.Create(cache));
+    }
+
+
+}
+
+
+
+public enum EnumGameSwitchCategory
+{
+    Test = 0,
 }

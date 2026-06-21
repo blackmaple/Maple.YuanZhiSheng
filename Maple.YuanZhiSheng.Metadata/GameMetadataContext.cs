@@ -7,6 +7,14 @@ using System.Text;
 namespace Maple.YuanZhiSheng.Metadata
 {
     [ContextParentMetadata<ContextMetadataCollector>(true)]
+    //游戏周期
+    [ContextMemberMetadata<GameProcessManager>]
+    //游戏模块管理器
+    [ContextMemberMetadata<ModelManager>]
+    [ContextMemberMetadata<StateModel>]
+    [ContextMemberMetadata<PlayerModel>]
+    [ContextMemberMetadata<BagModel>]
+
     //管理器
     [ContextMemberMetadata<MC>]
     //窗口
@@ -34,6 +42,11 @@ namespace Maple.YuanZhiSheng.Metadata
     [ContextMemberMetadata<BattleSkillData>]
     //技能大类
     [ContextMemberMetadata<BattleSkillCategoryData>]
+
+    //人物信息
+    [ContextMemberMetadata<RoleInfo>]
+    [ContextMemberMetadata<RoleData>]
+    [ContextMemberMetadata<PartnerData>]
 
     public partial class GameMetadataContext
     {

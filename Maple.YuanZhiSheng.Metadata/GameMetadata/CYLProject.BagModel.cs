@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.Core;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -83,9 +85,9 @@ namespace Maple.YuanZhiSheng.Metadata
             ///   System.Void .ctor()
             /// </summary>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            public partial void CTOR(); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute(".ctor", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           public partial void CTOR(); 
 */
             /// <summary>
             ///   System.Void AddItems(System.Collections.Generic.Dictionary<System.String , System.Int32> rewards, System.Boolean showTip)
@@ -93,11 +95,11 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "rewards">class System.Collections.Generic.Dictionary<System.String , System.Int32></param>
             /// <param name = "showTip">struct System.Boolean</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("AddItems", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Collections.Generic.Dictionary<System.String,System.Int32>", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
-            public partial void ADD_ITEMS(nint rewards, System.Boolean showTip); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("AddItems", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Collections.Generic.Dictionary<System.String,System.Int32>", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 1)]
+           public partial void ADD_ITEMS(nint rewards, System.Boolean showTip); 
 */
             /// <summary>
             ///   System.Void BuyBack(System.Collections.Generic.Dictionary<System.String , System.Int32> buybackItems, System.Collections.Generic.List<System.String> buybackSaveItems)
@@ -105,11 +107,11 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "buybackItems">class System.Collections.Generic.Dictionary<System.String , System.Int32></param>
             /// <param name = "buybackSaveItems">class System.Collections.Generic.List<System.String></param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("BuyBack", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Collections.Generic.Dictionary<System.String,System.Int32>", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Collections.Generic.List<System.String>", 1)]
-            public partial void BUY_BACK(nint buybackItems, nint buybackSaveItems); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("BuyBack", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Collections.Generic.Dictionary<System.String,System.Int32>", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Collections.Generic.List<System.String>", 1)]
+           public partial void BUY_BACK(nint buybackItems, nint buybackSaveItems); 
 */
             /// <summary>
             ///   System.Void BuyShopItem(System.String shopId, System.Int32 shopLevel, System.String shopItemId, System.Int32 count)
@@ -119,23 +121,23 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "shopItemId">class System.String</param>
             /// <param name = "count">struct System.Int32</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("BuyShopItem", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 1)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 3)]
-            public partial void BUY_SHOP_ITEM(nint shopId, System.Int32 shopLevel, nint shopItemId, System.Int32 count); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("BuyShopItem", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 1)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 2)]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 3)]
+           public partial void BUY_SHOP_ITEM(nint shopId, System.Int32 shopLevel, nint shopItemId, System.Int32 count); 
 */
             /// <summary>
             ///   System.Void BuyTavernShop(System.String id)
             /// </summary>
             /// <param name = "id">class System.String</param>
             /// <returns>struct System.Void</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("BuyTavernShop", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            public partial void BUY_TAVERN_SHOP(nint id); 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("BuyTavernShop", "System.Void", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
+           public partial void BUY_TAVERN_SHOP(nint id); 
 */
             /// <summary>
             ///   System.Boolean ChangeItemNum(System.String id, System.Int32 cnt, System.Boolean showTip, System.String roleId)
@@ -145,14 +147,14 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <param name = "showTip">struct System.Boolean</param>
             /// <param name = "roleId">class System.String</param>
             /// <returns>struct System.Boolean</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("ChangeItemNum", "System.Boolean", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Int32", 1)]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.Boolean", 2)]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 3)]
-            public partial System.Boolean CHANGE_ITEM_NUM(nint id, System.Int32 cnt, System.Boolean showTip, nint roleId); 
-*/
+            public partial System.Boolean CHANGE_ITEM_NUM(PMonoString id, System.Int32 cnt, System.Boolean showTip = false, PMonoString roleId = default); 
+
             /// <summary>
             ///   System.Boolean CheckLittleGameEnergy()
             /// </summary>
@@ -282,11 +284,11 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <param name = "id">class System.String</param>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetItemNum", "System.Int32", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            public partial System.Int32 GET_ITEM_NUM(nint id); 
-*/
+            public partial System.Int32 GET_ITEM_NUM(PMonoString id); 
+
             /// <summary>
             ///   System.Collections.Generic.List<System.String> GetRandomItemsShuffle(System.Collections.Generic.List<System.String> source, System.Int32 count)
             /// </summary>

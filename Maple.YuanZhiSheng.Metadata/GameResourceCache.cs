@@ -8,7 +8,10 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Text;
+using System.Xml.Linq;
 using static Maple.YuanZhiSheng.Metadata.LocalizationManager;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Maple.YuanZhiSheng.Metadata
 {
@@ -19,8 +22,10 @@ namespace Maple.YuanZhiSheng.Metadata
     {
         public static bool DEBUG { get; } = true;
         public GameMetadataContext Context { get; } = context;
-        public required GameInventoryResource[] InventoryResources { get; set; }
-        public required WinManager.Ptr_WinManager Ptr_WinManager { get; set; }
+        public required GameCurrencyResource[] CurrencyResources { get; init; }
+        public required GameInventoryResource[] InventoryResources { get; init; }
+        public required GameCharacterResource[] CharacterResources { get; init; }
+        public required WinManager.Ptr_WinManager Ptr_WinManager { get; init; }
 
         public static GameResourceCache Create(GameMetadataContext context)
         {
@@ -60,8 +65,14 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 context.Log(reg);
             }
-
-            GameInventoryResource[] inventoryDatas = [.. LoadAllItemData(localizationManager)];
+            GameObjectDisplayDTO[] gameObjects = [.. LoadAllItemData(localizationManager)];
+            
+            GameCurrencyResource[] currencyDatas = [.. gameObjects.Where(p => p is GameCurrencyResource).Cast<GameCurrencyResource>()];
+            foreach (var reg in currencyDatas)
+            {
+                context.Log(reg);
+            }
+            GameInventoryResource[] inventoryDatas = [.. gameObjects.Where(p => p is GameInventoryResource).Cast<GameInventoryResource>()];
             foreach (var reg in inventoryDatas)
             {
                 context.Log(reg);
@@ -73,9 +84,17 @@ namespace Maple.YuanZhiSheng.Metadata
                 context.Log(reg);
             }
 
+            GameCharacterResource[] roleDatas = [.. LoadAllRoleData(localizationManager)];
+            foreach (var reg in roleDatas)
+            {
+                context.Log(reg);
+            }
+
             var cache = new GameResourceCache(context)
             {
+                CurrencyResources = currencyDatas,
                 InventoryResources = inventoryDatas,
+                CharacterResources = roleDatas,
                 Ptr_WinManager = WinManager.Ptr_WinManager._INSTANCE
 
             };
@@ -92,6 +111,15 @@ namespace Maple.YuanZhiSheng.Metadata
             }
         }
 
+        public static bool InGame()
+        {
+            var gameProcessManager = GameProcessManager.Ptr_GameProcessManager._INSTANCE;
+            if (gameProcessManager.IsNull())
+            {
+                return false;
+            }
+            return gameProcessManager._CURR_SCENE_STATE != SceneState.None;
+        }
 
         static IEnumerable<GameObjectResource> LoadAllAttributeData(Ptr_LocalizationManager localizationManager)
         {
@@ -226,7 +254,7 @@ namespace Maple.YuanZhiSheng.Metadata
             }
 
         }
-        static IEnumerable<GameInventoryResource> LoadAllItemData(Ptr_LocalizationManager localizationManager)
+        static IEnumerable<GameObjectDisplayDTO> LoadAllItemData(Ptr_LocalizationManager localizationManager)
         {
             var list = ItemData.Ptr_ItemData.LIST;
             if (list.IsNull())
@@ -241,16 +269,58 @@ namespace Maple.YuanZhiSheng.Metadata
                 var name = localizationManager.GetText(att.ITEM_NAME);
                 var desc = localizationManager.GetText(att.ITEM_DESCRIPTION);
                 var image = att.ITEM_ICON.ToString();
-                yield return new GameInventoryResource()
+                var type = att.ITEM_TYPE;
+                var subtype = att.ITEM_SUB_TYPE;
+
+                if (IsInventory(type, subtype))
                 {
-                    ObjectId = id.ToString()!,
-                    ObjectPointer = att,
-                    //ImagePointer = default,
-                    DisplayImage = image,
-                    DisplayCategory = nameof(ItemData),
-                    DisplayDesc = desc,
-                    DisplayName = name,
+                    yield return new GameInventoryResource()
+                    {
+                        ObjectId = id.ToString()!,
+                        ObjectPointer = att,
+                        //ImagePointer = default,
+                        DisplayImage = image,
+                        DisplayCategory = type.ToString(),
+                        DisplayDesc = desc,
+                        DisplayName = name,
+                    };
+                }
+                else
+                {
+                    yield return new GameCurrencyResource()
+                    {
+                        ObjectId = id.ToString()!,
+                        ObjectPointer = att,
+                        //ImagePointer = default,
+                        DisplayImage = image,
+                        DisplayCategory = type.ToString(),
+                        DisplayDesc = desc,
+                        DisplayName = name,
+                    };
+                }    
+                
+            }
+
+            static bool IsInventory(ItemType itemType, ConsumeItemSubType itemSubType)
+            {
+                if (itemType == ItemType.Consume)
+                {
+                    return itemSubType switch
+                    {
+                        ConsumeItemSubType.Medicine => true,
+                        ConsumeItemSubType.Missile => true,
+                        _ => false,
+                    };
+                }
+                return itemType switch
+                {
+                    ItemType.Weapon => true,
+                    ItemType.Armor => true,
+                    ItemType.Accessory => true,
+                    ItemType.SkillBook => true,
+                    _ => false,
                 };
+  
             }
 
         }
@@ -282,7 +352,42 @@ namespace Maple.YuanZhiSheng.Metadata
             }
 
         }
+        static IEnumerable<GameCharacterResource> LoadAllRoleData(Ptr_LocalizationManager localizationManager)
+        {
+            PMonoString[] partnerList = [.. LoadAllPartnerData()];
 
+            foreach (var role in RoleData.Ptr_RoleData.LIST.AsEnumerable())
+            {
+                var id = role.ID;
+                var partner = partnerList.Where(p => p.AsReadOnlySpan().SequenceEqual(id.AsReadOnlySpan())).Any();
+                // var idx = role.IDX;
+                var name = localizationManager.GetText(role.NAME);
+                var desc = localizationManager.GetText(role.TAG);
+                var image = role.EX_HEAD_ICON.ToString();
+
+                yield return new GameCharacterResource()
+                {
+                    ObjectId = id.ToString()!,
+                    ObjectPointer = role,
+                    DisplayImage = image,
+                    DisplayCategory = partner ? nameof(PartnerData) : nameof(RoleData),
+                    DisplayDesc = desc,
+                    DisplayName = name,
+
+                };
+            }
+
+
+        }
+        static IEnumerable<PMonoString> LoadAllPartnerData()
+        {
+            foreach (var p in PartnerData.Ptr_PartnerData.LIST.AsEnumerable())
+            {
+                var id = p.ID;
+
+                yield return id;
+            }
+        }
     }
 
     internal static class GameResourceCacheExtensions

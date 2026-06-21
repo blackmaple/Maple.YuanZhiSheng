@@ -1,3 +1,6 @@
+using Maple.MonoGameAssistant.Core;
+using Maple.MonoGameAssistant.MetadataCollections;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -30,10 +33,10 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["Assembly-CSharp.dll"."CYLProject"."ModelManager"]
             /// </summary>
             /// <returns>class CYLProject.ModelManager</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_Instance", "CYLProject.ModelManager")]
-            public static partial nint _INSTANCE { get; set; } 
-*/
+            public static partial ModelManager.Ptr_ModelManager _INSTANCE { get; set; } 
+
 
             /// <summary>
             /// 0x10 System.Boolean <InitCompleted>k__BackingField
@@ -50,10 +53,10 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."Dictionary`2"]
             /// </summary>
             /// <returns>class System.Collections.Generic.Dictionary<System.Type , CYLProject.BaseModel></returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_modelDict", "System.Collections.Generic.Dictionary<System.Type,CYLProject.BaseModel>")]
-            public partial nint _MODEL_DICT { get; set; } 
-*/
+            public partial SysPtrDictionary<PMonoObject, PMonoObject> _MODEL_DICT { get; set; } 
+
         }
 
         /// <summary>

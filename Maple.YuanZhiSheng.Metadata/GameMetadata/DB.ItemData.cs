@@ -75,7 +75,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <returns>struct System.Int32</returns>
              
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ItemType>k__BackingField", "System.Int32")]
-            public partial System.Int32 ITEM_TYPE { get; set; } 
+            public partial ItemType ITEM_TYPE { get; set; } 
 
 
             /// <summary>
@@ -85,7 +85,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// <returns>struct System.Int32</returns>
              
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ItemSubType>k__BackingField", "System.Int32")]
-            public partial System.Int32 ITEM_SUB_TYPE { get; set; } 
+            public partial ConsumeItemSubType ITEM_SUB_TYPE { get; set; } 
 
 
             /// <summary>

@@ -1,3 +1,6 @@
+using Maple.MonoGameAssistant.Core;
+using Maple.MonoGameAssistant.MetadataCollections;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -30,10 +33,10 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System.Collections.Generic"."List`1"]
             /// </summary>
             /// <returns>class System.Collections.Generic.List<DB.PartnerData></returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("list", "System.Collections.Generic.List<DB.PartnerData>")]
-            public static partial nint LIST { get; set; } 
-*/
+            public static partial SysPtrList<PartnerData.Ptr_PartnerData> LIST { get; set; } 
+
 
             /// <summary>
             /// 0x8 System.Collections.Generic.Dictionary<System.String , DB.PartnerData> map
@@ -50,20 +53,20 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<id>k__BackingField", "System.String")]
-            public partial nint ID { get; set; } 
-*/
+            public partial PMonoString ID { get; set; } 
+
 
             /// <summary>
             /// 0x18 System.Int32 <InitLevel>k__BackingField
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<InitLevel>k__BackingField", "System.Int32")]
             public partial System.Int32 INIT_LEVEL { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x20 System.Int32[] <Conditions>k__BackingField

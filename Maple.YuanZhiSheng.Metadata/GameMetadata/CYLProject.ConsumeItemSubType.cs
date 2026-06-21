@@ -11,4 +11,9 @@ namespace Maple.YuanZhiSheng.Metadata
         Missile = 0x00000003,
         TreasureMap = 0x00000004
     }
+    public enum OtherItemSubType
+    {
+        // Token: 0x04002FA3 RID: 12195
+        Gift
+    }
 }
