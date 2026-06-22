@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.Core;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -648,21 +650,21 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <param name = "roleId">class System.String</param>
             /// <returns>class System.Single[]</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetRoleAttributeValues", "System.Single[]", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            public partial nint GET_ROLE_ATTRIBUTE_VALUES(nint roleId); 
-*/
+            public partial PMonoArray<float> GET_ROLE_ATTRIBUTE_VALUES(PMonoString roleId); 
+
             /// <summary>
             ///   System.Single[] GetRoleBattleAttributeValues(System.String roleId)
             /// </summary>
             /// <param name = "roleId">class System.String</param>
             /// <returns>class System.Single[]</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetRoleBattleAttributeValues", "System.Single[]", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            public partial nint GET_ROLE_BATTLE_ATTRIBUTE_VALUES(nint roleId); 
-*/
+            public partial PMonoArray<float> GET_ROLE_BATTLE_ATTRIBUTE_VALUES(PMonoString roleId); 
+
             /// <summary>
             ///   System.Collections.Generic.List<DB.RoleTalentData> GetRoleBattleTalentList(System.String roleId)
             /// </summary>
@@ -700,11 +702,11 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <param name = "id">class System.String</param>
             /// <returns>class CYLProject.RoleInfo</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodMetadataAttribute("GetRoleInfo", "CYLProject.RoleInfo", CallConvs = [typeof(System.Runtime.CompilerServices.CallConvSuppressGCTransition)])]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassMethodParameterMetadataAttribute("System.String", 0)]
-            public partial nint GET_ROLE_INFO(nint id); 
-*/
+            public partial RoleInfo.Ptr_RoleInfo GET_ROLE_INFO(PMonoString id); 
+
             /// <summary>
             ///   System.Int32 GetRoleTalentPoint(System.String talentId)
             /// </summary>

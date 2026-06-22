@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.Core;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -46,10 +48,10 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["Assembly-CSharp.dll"."CYLProject"."GameMapManager"]
             /// </summary>
             /// <returns>class CYLProject.GameMapManager</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_Instance", "CYLProject.GameMapManager")]
-            public static partial nint _INSTANCE { get; set; } 
-*/
+            public static partial GameMapManager.Ptr_GameMapManager _INSTANCE { get; set; } 
+
 
             /// <summary>
             /// 0x0 System.Int32 OffsetOfInstanceIDInCPlusPlusObject
@@ -116,10 +118,10 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["UnityEngine.CoreModule.dll"."UnityEngine"."GameObject"]
             /// </summary>
             /// <returns>class UnityEngine.GameObject</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("_mapRoot", "UnityEngine.GameObject")]
-            public partial nint _MAP_ROOT { get; set; } 
-*/
+            public partial PMonoObject _MAP_ROOT { get; set; } 
+
 
             /// <summary>
             /// 0x40 UnityEngine.GameObject _playerRoomRoot

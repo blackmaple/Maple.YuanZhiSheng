@@ -25,6 +25,11 @@ namespace Maple.YuanZhiSheng.Metadata
         public required GameCurrencyResource[] CurrencyResources { get; init; }
         public required GameInventoryResource[] InventoryResources { get; init; }
         public required GameCharacterResource[] CharacterResources { get; init; }
+
+        public required GameObjectResource[] PlayerAttributeDatas { get; init; }
+        public required GameObjectResource[] BattleAttributeDatas { get; init; }
+        public required GameObjectResource[] PlayerPersonalityDatas { get; init; }
+        
         public required WinManager.Ptr_WinManager Ptr_WinManager { get; init; }
 
         public static GameResourceCache Create(GameMetadataContext context)
@@ -95,6 +100,11 @@ namespace Maple.YuanZhiSheng.Metadata
                 CurrencyResources = currencyDatas,
                 InventoryResources = inventoryDatas,
                 CharacterResources = roleDatas,
+
+                PlayerAttributeDatas = playerAttributeDatas,
+                PlayerPersonalityDatas = playerPersonalityDatas,
+                BattleAttributeDatas= battleAttributeDatas,
+
                 Ptr_WinManager = WinManager.Ptr_WinManager._INSTANCE
 
             };

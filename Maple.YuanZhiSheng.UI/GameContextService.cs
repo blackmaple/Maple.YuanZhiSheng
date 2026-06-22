@@ -142,6 +142,14 @@ public sealed class GameContextService(
     {
         return new ValueTask<GameCharacterDisplayDTO[]>(this.Cache.CharacterResources);
     }
+    public override ValueTask<GameCharacterStatusDTO> GetCharacterStatusAsync(GameCharacterObjectDTO characterObjectDTO)
+    {
+        return base.GetCharacterStatusAsync(characterObjectDTO);
+    }
+    public override ValueTask<GameCharacterStatusDTO> UpdateCharacterStatusAsync(GameCharacterModifyDTO characterModifyDTO)
+    {
+        return base.UpdateCharacterStatusAsync(characterModifyDTO);
+    }
 
 
     private Task<bool> ShowMsgAsync(string msg)
