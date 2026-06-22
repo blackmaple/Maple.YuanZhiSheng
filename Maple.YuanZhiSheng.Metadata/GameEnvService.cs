@@ -38,6 +38,8 @@ namespace Maple.YuanZhiSheng.Metadata
             Logger.LogInformation("Bag:{Bag:X8}, State:{State:X8}, Player:{Player:X8}", bag.Ptr, state.Ptr, player.Ptr);
         }
 
+        #region Currency
+
         private static GameCurrencyInfoDTO GetCurrencyInfoImp(BagModel.Ptr_BagModel bag, ItemData.Ptr_ItemData item, GameCurrencyResource res)
         {
             var count = bag.GET_ITEM_NUM(item.ID);
@@ -47,7 +49,7 @@ namespace Maple.YuanZhiSheng.Metadata
                 Currency = count,
             };
         }
-        private bool TryGetCurrencyResource(GameCurrencyObjectDTO currencyObjectDTO, [MaybeNullWhen(false)]out GameCurrencyResource res)
+        private bool TryGetCurrencyResource(GameCurrencyObjectDTO currencyObjectDTO, [MaybeNullWhen(false)] out GameCurrencyResource res)
         {
             res = this.Cache.CurrencyResources.Where(p => p.ObjectId == currencyObjectDTO.CurrencyObject && p.DisplayCategory == currencyObjectDTO.CurrencyCategory).FirstOrDefault();
             return res is not null;
@@ -76,7 +78,9 @@ namespace Maple.YuanZhiSheng.Metadata
             bag.CHANGE_ITEM_NUM(item.ID, currencyModifyDTO.IntValue - count);
             return GetCurrencyInfoImp(bag, item, res);
         }
+        #endregion
 
+        #region Inventory
 
         private static GameInventoryInfoDTO GetInventoryInfoImp(BagModel.Ptr_BagModel bag, ItemData.Ptr_ItemData item, GameInventoryResource res)
         {
@@ -114,6 +118,92 @@ namespace Maple.YuanZhiSheng.Metadata
             bag.CHANGE_ITEM_NUM(item.ID, inventoryModifyDTO.InventoryCount - count);
             return GetInventoryInfoImp(bag, item, res);
         }
+        #endregion
+
+        #region Character
+        bool TryGetCharacterRes(GameCharacterObjectDTO characterObjectDTO, [MaybeNullWhen(false)] out GameCharacterResource res)
+        {
+            res = this.Cache.CharacterResources.Where(p => p.ObjectId == characterObjectDTO.CharacterId && p.DisplayCategory == characterObjectDTO.CharacterCategory).FirstOrDefault();
+            return res is not null;
+        }
+        GameCharacterResource GetCharacterRes(GameCharacterObjectDTO characterObjectDTO)
+        {
+            if (!TryGetCharacterRes(characterObjectDTO, out var res))
+            {
+                GameException.Throw<GameCharacterResource>($"NOT FOUND:{characterObjectDTO.CharacterCategory}:{characterObjectDTO.CharacterId}");
+            }
+            return res;
+
+        }
+
+        IEnumerable<GameSwitchDisplayDTO> GetRoleInfo(PlayerModel.Ptr_PlayerModel playerModel, RoleInfo.Ptr_RoleInfo roleInfo, PMonoString roleId)
+        {
+
+        }
+        IEnumerable<GameSwitchDisplayDTO> GetPartnerInfo(PlayerModel.Ptr_PlayerModel playerModel, RoleInfo.Ptr_RoleInfo roleInfo, PMonoString roleId)
+        {
+            float[] attDatas = [.. playerModel.GET_ROLE_ATTRIBUTE_VALUES(roleId).AsSpan()];
+            foreach (var att in this.Cache.PlayerAttributeDatas)
+            {
+                var pAtt = new AttributeData.Ptr_AttributeData(att.ObjectPointer);
+                var t = attDatas.ElementAtOrDefault(pAtt.IDX);
+                yield return new GameSwitchDisplayDTO
+                {
+                    ObjectId = att.ObjectId,
+                    DisplayCategory = att.DisplayCategory,
+                    DisplayName = att.DisplayName,
+                    DisplayDesc = att.DisplayDesc,
+                    DisplayImage = att.DisplayImage,
+                    DecimalValue = new decimal(t),
+                };
+            }
+
+            float[] battleDatas = [.. playerModel.GET_ROLE_BATTLE_ATTRIBUTE_VALUES(roleId).AsSpan()];
+            foreach (var att in this.Cache.BattleAttributeDatas)
+            {
+                var pAtt = new BattleAttributeData.Ptr_BattleAttributeData(att.ObjectPointer);
+                var t = battleDatas.ElementAtOrDefault(pAtt.IDX);
+                yield return new GameSwitchDisplayDTO
+                {
+                    ObjectId = att.ObjectId,
+                    DisplayCategory = att.DisplayCategory,
+                    DisplayName = att.DisplayName,
+                    DisplayDesc = att.DisplayDesc,
+                    DisplayImage = att.DisplayImage,
+                    DecimalValue = new decimal(t),
+                };
+            }
+
+        }
+        IEnumerable<GameSwitchDisplayDTO> GetMainPlay(PlayerModel.Ptr_PlayerModel playerModel, RoleInfo.Ptr_RoleInfo roleInfo, PMonoString roleId)
+        {
+
+        }
+
+
+        GameCharacterStatusDTO GetCharacterStatus(GameCharacterObjectDTO characterObjectDTO)
+        {
+            var res = GetCharacterRes(characterObjectDTO);
+            RoleData.Ptr_RoleData roleData = new(res.ObjectPointer);
+            var playerModel = this.GetPlayerModel();
+            var id = roleData.ID;
+            var roleInfo = playerModel.GET_ROLE_INFO(id);
+            return new GameCharacterStatusDTO()
+            {
+                ObjectId = characterObjectDTO.CharacterId,
+                CharacterAttributes = [
+                    ..GetPartnerInfo(playerModel, roleInfo, id),
+                    ..GetMainPlay(playerModel, roleInfo, id ),
+                    ..GetRoleInfo(playerModel, roleInfo ,id),
+                    ]
+
+
+            };
+        }
+        GameCharacterStatusDTO UpdateCharacterStatus(GameCharacterModifyDTO characterModifyDTO) { }
+        #endregion
+
+        #region Model
 
         private T GetModel<TREF, T>(TREF classMetadataCollector)
             where TREF : ClassMetadataCollector<T>
@@ -144,5 +234,7 @@ namespace Maple.YuanZhiSheng.Metadata
         {
             return GetModel<PlayerModel, PlayerModel.Ptr_PlayerModel>(this.Cache.Context.PlayerModel);
         }
+        #endregion
+
     }
 }

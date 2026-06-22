@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.Core;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -30,110 +32,110 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Level", "System.Int32")]
             public partial System.Int32 LEVEL { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x14 System.Int32 Exp
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Exp", "System.Int32")]
             public partial System.Int32 EXP { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x18 System.Int32 Favorability
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Favorability", "System.Int32")]
             public partial System.Int32 FAVORABILITY { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x1C System.Boolean InTeam
             /// struct ["mscorlib.dll"."System"."Boolean"]
             /// </summary>
             /// <returns>struct System.Boolean</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("InTeam", "System.Boolean")]
             public partial System.Boolean IN_TEAM { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x20 System.Int32 TotalTalentPoint
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("TotalTalentPoint", "System.Int32")]
             public partial System.Int32 TOTAL_TALENT_POINT { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x24 System.Int32 ChatRest
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ChatRest", "System.Int32")]
             public partial System.Int32 CHAT_REST { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x28 System.Int32 SendGiftFreeRest
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("SendGiftFreeRest", "System.Int32")]
             public partial System.Int32 SEND_GIFT_FREE_REST { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x2C System.Int32 ChallengeRest
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ChallengeRest", "System.Int32")]
             public partial System.Int32 CHALLENGE_REST { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x30 System.Int32 ChallengeStage
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ChallengeStage", "System.Int32")]
             public partial System.Int32 CHALLENGE_STAGE { get; set; } 
-*/
+
 
             /// <summary>
             /// 0x38 System.String[] BattleSkills
             /// class ["mscorlib.dll"."System"."String[]"]
             /// </summary>
             /// <returns>class System.String[]</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("BattleSkills", "System.String[]")]
-            public partial nint BATTLE_SKILLS { get; set; } 
-*/
+            public partial PMonoArray<PMonoString> BATTLE_SKILLS { get; set; } 
+
 
             /// <summary>
             /// 0x40 System.String[] SlotEquipIds
             /// class ["mscorlib.dll"."System"."String[]"]
             /// </summary>
             /// <returns>class System.String[]</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("SlotEquipIds", "System.String[]")]
-            public partial nint SLOT_EQUIP_IDS { get; set; } 
-*/
+            public partial PMonoArray<PMonoString> SLOT_EQUIP_IDS { get; set; } 
+
 
             /// <summary>
             /// 0x48 System.Collections.Generic.Dictionary<System.String , System.Int32> TalentPointDict
@@ -160,20 +162,20 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."Single[]"]
             /// </summary>
             /// <returns>class System.Single[]</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ExtraAttributes", "System.Single[]")]
-            public partial nint EXTRA_ATTRIBUTES { get; set; } 
-*/
+            public partial PMonoArray<float> EXTRA_ATTRIBUTES { get; set; } 
+
 
             /// <summary>
             /// 0x60 System.Single[] ExtraBattleAttributes
             /// class ["mscorlib.dll"."System"."Single[]"]
             /// </summary>
             /// <returns>class System.Single[]</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ExtraBattleAttributes", "System.Single[]")]
-            public partial nint EXTRA_BATTLE_ATTRIBUTES { get; set; } 
-*/
+            public partial PMonoArray<float> EXTRA_BATTLE_ATTRIBUTES { get; set; } 
+
         }
 
         /// <summary>

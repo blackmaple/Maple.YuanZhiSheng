@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.Core;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -140,20 +142,20 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."Single[]"]
             /// </summary>
             /// <returns>class System.Single[]</returns>
-             /*
+             
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("AttributeValues", "System.Single[]")]
-            public partial nint ATTRIBUTE_VALUES { get; set; } 
-*/
+            public partial PMonoArray<float> ATTRIBUTE_VALUES { get; set; } 
+
 
             /// <summary>
             /// 0x60 System.Single[] LastAttributeValues
             /// class ["mscorlib.dll"."System"."Single[]"]
             /// </summary>
             /// <returns>class System.Single[]</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("LastAttributeValues", "System.Single[]")]
-            public partial nint LAST_ATTRIBUTE_VALUES { get; set; } 
-*/
+            public partial PMonoArray<float> LAST_ATTRIBUTE_VALUES { get; set; } 
+
 
             /// <summary>
             /// 0x68 System.UInt32[] RecordValues
