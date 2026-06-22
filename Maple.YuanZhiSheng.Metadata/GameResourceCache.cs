@@ -29,11 +29,12 @@ namespace Maple.YuanZhiSheng.Metadata
         public required GameObjectResource[] PlayerAttributeDatas { get; init; }
         public required GameObjectResource[] BattleAttributeDatas { get; init; }
         public required GameObjectResource[] PlayerPersonalityDatas { get; init; }
-        
+        public required PMonoString MainPlayerId { get; init;  }
         public required WinManager.Ptr_WinManager Ptr_WinManager { get; init; }
 
         public static GameResourceCache Create(GameMetadataContext context)
         {
+            SpinWait.SpinUntil(() => GameConfig.Ptr_GameConfig.MAIN_PLAYER_ID.Valid());
 
             SpinWait.SpinUntil(() => MC.Ptr_MC._INSTANCE.IsNotNull());
             // SpinWait.SpinUntil(() => LocalizationManager.Ptr_LocalizationManager._INSTANCE.IsNotNull());
@@ -105,8 +106,8 @@ namespace Maple.YuanZhiSheng.Metadata
                 PlayerPersonalityDatas = playerPersonalityDatas,
                 BattleAttributeDatas= battleAttributeDatas,
 
-                Ptr_WinManager = WinManager.Ptr_WinManager._INSTANCE
-
+                Ptr_WinManager = WinManager.Ptr_WinManager._INSTANCE,
+                MainPlayerId = GameConfig.Ptr_GameConfig.MAIN_PLAYER_ID,
             };
             return cache;
         }

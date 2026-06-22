@@ -47,6 +47,7 @@ namespace Maple.YuanZhiSheng.Metadata
     [ContextMemberMetadata<RoleInfo>]
     [ContextMemberMetadata<RoleData>]
     [ContextMemberMetadata<PartnerData>]
+    [ContextMemberMetadata<GameConfig>]
 
     public partial class GameMetadataContext
     {

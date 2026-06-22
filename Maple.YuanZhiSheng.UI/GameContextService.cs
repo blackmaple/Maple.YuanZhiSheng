@@ -142,13 +142,15 @@ public sealed class GameContextService(
     {
         return new ValueTask<GameCharacterDisplayDTO[]>(this.Cache.CharacterResources);
     }
-    public override ValueTask<GameCharacterStatusDTO> GetCharacterStatusAsync(GameCharacterObjectDTO characterObjectDTO)
+    public override async ValueTask<GameCharacterStatusDTO> GetCharacterStatusAsync(GameCharacterObjectDTO characterObjectDTO)
     {
-        return base.GetCharacterStatusAsync(characterObjectDTO);
+        var gameEnv = await this.LoadGameEnvServiceThrowIfNotLoadedAsync().ConfigureAwait(false);
+        return await this.MTaskAsync((gameEnv, characterObjectDTO), (p, args) => args.gameEnv.GetCharacterStatus(args.characterObjectDTO)).ConfigureAwait(false);
     }
-    public override ValueTask<GameCharacterStatusDTO> UpdateCharacterStatusAsync(GameCharacterModifyDTO characterModifyDTO)
+    public override async ValueTask<GameCharacterStatusDTO> UpdateCharacterStatusAsync(GameCharacterModifyDTO characterModifyDTO)
     {
-        return base.UpdateCharacterStatusAsync(characterModifyDTO);
+        var gameEnv = await this.LoadGameEnvServiceThrowIfNotLoadedAsync().ConfigureAwait(false);
+        return await this.MTaskAsync((gameEnv, characterModifyDTO), (p, args) => args.gameEnv.UpdateCharacterStatus(args.characterModifyDTO)).ConfigureAwait(false);
     }
 
 

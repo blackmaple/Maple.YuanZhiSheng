@@ -1,3 +1,5 @@
+using Maple.MonoGameAssistant.Core;
+
 namespace Maple.YuanZhiSheng.Metadata
 {
     /// <summary>
@@ -17,7 +19,7 @@ namespace Maple.YuanZhiSheng.Metadata
 
             public static implicit operator Ptr_GameConfig(System.IntPtr ptr) => new Ptr_GameConfig(ptr);
             public static implicit operator System.IntPtr(Ptr_GameConfig ptr) => ptr.m_Pointer;
-            public static implicit operator bool (Ptr_GameConfig ptr) => ptr.m_Pointer != System.IntPtr.Zero;
+            public static implicit operator bool(Ptr_GameConfig ptr) => ptr.m_Pointer != System.IntPtr.Zero;
         }
 
         /// <summary>
@@ -30,9 +32,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."Int32[]"]
             /// </summary>
             /// <returns>class System.Int32[]</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<IncludeLanguage>k__BackingField", "System.Int32[]")]
-            public static partial nint INCLUDE_LANGUAGE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<IncludeLanguage>k__BackingField", "System.Int32[]")]
+           public static partial nint INCLUDE_LANGUAGE { get; set; } 
 */
 
             /// <summary>
@@ -40,9 +42,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StartBgm>k__BackingField", "System.String")]
-            public static partial nint START_BGM { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StartBgm>k__BackingField", "System.String")]
+           public static partial nint START_BGM { get; set; } 
 */
 
             /// <summary>
@@ -50,9 +52,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RoomBgm>k__BackingField", "System.String")]
-            public static partial nint ROOM_BGM { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RoomBgm>k__BackingField", "System.String")]
+           public static partial nint ROOM_BGM { get; set; } 
 */
 
             /// <summary>
@@ -60,19 +62,19 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
+
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MainPlayerId>k__BackingField", "System.String")]
-            public static partial nint MAIN_PLAYER_ID { get; set; } 
-*/
+            public static partial PMonoString MAIN_PLAYER_ID { get; set; }
+
 
             /// <summary>
             /// 0x20 System.Int32 <MainPlayerFavMinStage>k__BackingField
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MainPlayerFavMinStage>k__BackingField", "System.Int32")]
-            public static partial System.Int32 MAIN_PLAYER_FAV_MIN_STAGE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MainPlayerFavMinStage>k__BackingField", "System.Int32")]
+           public static partial System.Int32 MAIN_PLAYER_FAV_MIN_STAGE { get; set; } 
 */
 
             /// <summary>
@@ -80,9 +82,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MainPlayerSpecialtyMin>k__BackingField", "System.Single")]
-            public static partial System.Single MAIN_PLAYER_SPECIALTY_MIN { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MainPlayerSpecialtyMin>k__BackingField", "System.Single")]
+           public static partial System.Single MAIN_PLAYER_SPECIALTY_MIN { get; set; } 
 */
 
             /// <summary>
@@ -90,9 +92,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MainPlayerPreLvTalentPoint>k__BackingField", "System.Int32")]
-            public static partial System.Int32 MAIN_PLAYER_PRE_LV_TALENT_POINT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MainPlayerPreLvTalentPoint>k__BackingField", "System.Int32")]
+           public static partial System.Int32 MAIN_PLAYER_PRE_LV_TALENT_POINT { get; set; } 
 */
 
             /// <summary>
@@ -100,9 +102,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerPreLvTalentPoint>k__BackingField", "System.Int32")]
-            public static partial System.Int32 PARTNER_PRE_LV_TALENT_POINT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerPreLvTalentPoint>k__BackingField", "System.Int32")]
+           public static partial System.Int32 PARTNER_PRE_LV_TALENT_POINT { get; set; } 
 */
 
             /// <summary>
@@ -110,9 +112,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RoomMapTwoId>k__BackingField", "System.String")]
-            public static partial nint ROOM_MAP_TWO_ID { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RoomMapTwoId>k__BackingField", "System.String")]
+           public static partial nint ROOM_MAP_TWO_ID { get; set; } 
 */
 
             /// <summary>
@@ -120,9 +122,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RandomAttributeCap>k__BackingField", "System.Single")]
-            public static partial System.Single RANDOM_ATTRIBUTE_CAP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RandomAttributeCap>k__BackingField", "System.Single")]
+           public static partial System.Single RANDOM_ATTRIBUTE_CAP { get; set; } 
 */
 
             /// <summary>
@@ -130,9 +132,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RandomAttributeRedNum>k__BackingField", "System.Single")]
-            public static partial System.Single RANDOM_ATTRIBUTE_RED_NUM { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RandomAttributeRedNum>k__BackingField", "System.Single")]
+           public static partial System.Single RANDOM_ATTRIBUTE_RED_NUM { get; set; } 
 */
 
             /// <summary>
@@ -140,9 +142,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RandomAttributeTotal>k__BackingField", "System.Single")]
-            public static partial System.Single RANDOM_ATTRIBUTE_TOTAL { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RandomAttributeTotal>k__BackingField", "System.Single")]
+           public static partial System.Single RANDOM_ATTRIBUTE_TOTAL { get; set; } 
 */
 
             /// <summary>
@@ -150,9 +152,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<AttributeCap>k__BackingField", "System.Single")]
-            public static partial System.Single ATTRIBUTE_CAP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<AttributeCap>k__BackingField", "System.Single")]
+           public static partial System.Single ATTRIBUTE_CAP { get; set; } 
 */
 
             /// <summary>
@@ -160,9 +162,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ScheduleAskEnergy>k__BackingField", "System.Int32")]
-            public static partial System.Int32 SCHEDULE_ASK_ENERGY { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ScheduleAskEnergy>k__BackingField", "System.Int32")]
+           public static partial System.Int32 SCHEDULE_ASK_ENERGY { get; set; } 
 */
 
             /// <summary>
@@ -170,9 +172,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ScheduleVisitAddMood>k__BackingField", "System.Int32")]
-            public static partial System.Int32 SCHEDULE_VISIT_ADD_MOOD { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ScheduleVisitAddMood>k__BackingField", "System.Int32")]
+           public static partial System.Int32 SCHEDULE_VISIT_ADD_MOOD { get; set; } 
 */
 
             /// <summary>
@@ -180,9 +182,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ScheduleVisitAddFav>k__BackingField", "System.Int32")]
-            public static partial System.Int32 SCHEDULE_VISIT_ADD_FAV { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ScheduleVisitAddFav>k__BackingField", "System.Int32")]
+           public static partial System.Int32 SCHEDULE_VISIT_ADD_FAV { get; set; } 
 */
 
             /// <summary>
@@ -190,9 +192,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<InitMood>k__BackingField", "System.Int32")]
-            public static partial System.Int32 INIT_MOOD { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<InitMood>k__BackingField", "System.Int32")]
+           public static partial System.Int32 INIT_MOOD { get; set; } 
 */
 
             /// <summary>
@@ -200,9 +202,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MoodCap>k__BackingField", "System.Int32")]
-            public static partial System.Int32 MOOD_CAP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MoodCap>k__BackingField", "System.Int32")]
+           public static partial System.Int32 MOOD_CAP { get; set; } 
 */
 
             /// <summary>
@@ -210,9 +212,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyFailMoodRatio>k__BackingField", "System.Single")]
-            public static partial System.Single STUDY_FAIL_MOOD_RATIO { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyFailMoodRatio>k__BackingField", "System.Single")]
+           public static partial System.Single STUDY_FAIL_MOOD_RATIO { get; set; } 
 */
 
             /// <summary>
@@ -220,9 +222,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyFailPercent>k__BackingField", "System.Single")]
-            public static partial System.Single STUDY_FAIL_PERCENT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyFailPercent>k__BackingField", "System.Single")]
+           public static partial System.Single STUDY_FAIL_PERCENT { get; set; } 
 */
 
             /// <summary>
@@ -230,9 +232,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyBigSuccessMoodRatio>k__BackingField", "System.Single")]
-            public static partial System.Single STUDY_BIG_SUCCESS_MOOD_RATIO { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyBigSuccessMoodRatio>k__BackingField", "System.Single")]
+           public static partial System.Single STUDY_BIG_SUCCESS_MOOD_RATIO { get; set; } 
 */
 
             /// <summary>
@@ -240,9 +242,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyBgiSucessPercent>k__BackingField", "System.Single")]
-            public static partial System.Single STUDY_BGI_SUCESS_PERCENT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyBgiSucessPercent>k__BackingField", "System.Single")]
+           public static partial System.Single STUDY_BGI_SUCESS_PERCENT { get; set; } 
 */
 
             /// <summary>
@@ -250,9 +252,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyDoubleBigSuccessMoodRatio>k__BackingField", "System.Single")]
-            public static partial System.Single STUDY_DOUBLE_BIG_SUCCESS_MOOD_RATIO { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StudyDoubleBigSuccessMoodRatio>k__BackingField", "System.Single")]
+           public static partial System.Single STUDY_DOUBLE_BIG_SUCCESS_MOOD_RATIO { get; set; } 
 */
 
             /// <summary>
@@ -260,9 +262,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<LittleGameEnergyCost>k__BackingField", "System.Int32")]
-            public static partial System.Int32 LITTLE_GAME_ENERGY_COST { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<LittleGameEnergyCost>k__BackingField", "System.Int32")]
+           public static partial System.Int32 LITTLE_GAME_ENERGY_COST { get; set; } 
 */
 
             /// <summary>
@@ -270,9 +272,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<LittleGameDuration>k__BackingField", "System.Int32")]
-            public static partial System.Int32 LITTLE_GAME_DURATION { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<LittleGameDuration>k__BackingField", "System.Int32")]
+           public static partial System.Int32 LITTLE_GAME_DURATION { get; set; } 
 */
 
             /// <summary>
@@ -280,9 +282,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PreEnergyCap>k__BackingField", "System.Int32")]
-            public static partial System.Int32 PRE_ENERGY_CAP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PreEnergyCap>k__BackingField", "System.Int32")]
+           public static partial System.Int32 PRE_ENERGY_CAP { get; set; } 
 */
 
             /// <summary>
@@ -290,9 +292,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PreEnergyCapDay>k__BackingField", "System.Int32")]
-            public static partial System.Int32 PRE_ENERGY_CAP_DAY { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PreEnergyCapDay>k__BackingField", "System.Int32")]
+           public static partial System.Int32 PRE_ENERGY_CAP_DAY { get; set; } 
 */
 
             /// <summary>
@@ -300,9 +302,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyCap>k__BackingField", "System.Int32")]
-            public static partial System.Int32 ENERGY_CAP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyCap>k__BackingField", "System.Int32")]
+           public static partial System.Int32 ENERGY_CAP { get; set; } 
 */
 
             /// <summary>
@@ -310,9 +312,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RoomRestEnergy>k__BackingField", "System.Int32")]
-            public static partial System.Int32 ROOM_REST_ENERGY { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<RoomRestEnergy>k__BackingField", "System.Int32")]
+           public static partial System.Int32 ROOM_REST_ENERGY { get; set; } 
 */
 
             /// <summary>
@@ -320,9 +322,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyToExp>k__BackingField", "System.Single")]
-            public static partial System.Single ENERGY_TO_EXP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyToExp>k__BackingField", "System.Single")]
+           public static partial System.Single ENERGY_TO_EXP { get; set; } 
 */
 
             /// <summary>
@@ -330,9 +332,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyToCareerExp>k__BackingField", "System.Single")]
-            public static partial System.Single ENERGY_TO_CAREER_EXP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyToCareerExp>k__BackingField", "System.Single")]
+           public static partial System.Single ENERGY_TO_CAREER_EXP { get; set; } 
 */
 
             /// <summary>
@@ -340,9 +342,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<CalendarRoomRestCnt>k__BackingField", "System.Int32")]
-            public static partial System.Int32 CALENDAR_ROOM_REST_CNT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<CalendarRoomRestCnt>k__BackingField", "System.Int32")]
+           public static partial System.Int32 CALENDAR_ROOM_REST_CNT { get; set; } 
 */
 
             /// <summary>
@@ -350,9 +352,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<WeaponWorkShop>k__BackingField", "System.String")]
-            public static partial nint WEAPON_WORK_SHOP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<WeaponWorkShop>k__BackingField", "System.String")]
+           public static partial nint WEAPON_WORK_SHOP { get; set; } 
 */
 
             /// <summary>
@@ -360,9 +362,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<DressWorkShop>k__BackingField", "System.String")]
-            public static partial nint DRESS_WORK_SHOP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<DressWorkShop>k__BackingField", "System.String")]
+           public static partial nint DRESS_WORK_SHOP { get; set; } 
 */
 
             /// <summary>
@@ -370,9 +372,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ConsumablesWorkShop>k__BackingField", "System.String")]
-            public static partial nint CONSUMABLES_WORK_SHOP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ConsumablesWorkShop>k__BackingField", "System.String")]
+           public static partial nint CONSUMABLES_WORK_SHOP { get; set; } 
 */
 
             /// <summary>
@@ -380,9 +382,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["Assembly-CSharp.dll"."DB"."DBVec3Pos"]
             /// </summary>
             /// <returns>class DB.DBVec3Pos</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StoryStandCenter>k__BackingField", "DB.DBVec3Pos")]
-            public static partial nint STORY_STAND_CENTER { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StoryStandCenter>k__BackingField", "DB.DBVec3Pos")]
+           public static partial nint STORY_STAND_CENTER { get; set; } 
 */
 
             /// <summary>
@@ -390,9 +392,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StoryStandSpacingX>k__BackingField", "System.Single")]
-            public static partial System.Single STORY_STAND_SPACING_X { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StoryStandSpacingX>k__BackingField", "System.Single")]
+           public static partial System.Single STORY_STAND_SPACING_X { get; set; } 
 */
 
             /// <summary>
@@ -400,9 +402,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StoryStandSpacingY>k__BackingField", "System.Single")]
-            public static partial System.Single STORY_STAND_SPACING_Y { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<StoryStandSpacingY>k__BackingField", "System.Single")]
+           public static partial System.Single STORY_STAND_SPACING_Y { get; set; } 
 */
 
             /// <summary>
@@ -410,9 +412,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyCost_PartnerSendGift>k__BackingField", "System.Int32")]
-            public static partial System.Int32 ENERGY_COST_PARTNER_SEND_GIFT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyCost_PartnerSendGift>k__BackingField", "System.Int32")]
+           public static partial System.Int32 ENERGY_COST_PARTNER_SEND_GIFT { get; set; } 
 */
 
             /// <summary>
@@ -420,9 +422,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyCost_PartnerChallenge>k__BackingField", "System.Int32")]
-            public static partial System.Int32 ENERGY_COST_PARTNER_CHALLENGE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<EnergyCost_PartnerChallenge>k__BackingField", "System.Int32")]
+           public static partial System.Int32 ENERGY_COST_PARTNER_CHALLENGE { get; set; } 
 */
 
             /// <summary>
@@ -430,9 +432,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerChatCount>k__BackingField", "System.Int32")]
-            public static partial System.Int32 PARTNER_CHAT_COUNT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerChatCount>k__BackingField", "System.Int32")]
+           public static partial System.Int32 PARTNER_CHAT_COUNT { get; set; } 
 */
 
             /// <summary>
@@ -440,9 +442,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerSendGiftFreeCount>k__BackingField", "System.Int32")]
-            public static partial System.Int32 PARTNER_SEND_GIFT_FREE_COUNT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerSendGiftFreeCount>k__BackingField", "System.Int32")]
+           public static partial System.Int32 PARTNER_SEND_GIFT_FREE_COUNT { get; set; } 
 */
 
             /// <summary>
@@ -450,9 +452,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerChallengeCount>k__BackingField", "System.Int32")]
-            public static partial System.Int32 PARTNER_CHALLENGE_COUNT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PartnerChallengeCount>k__BackingField", "System.Int32")]
+           public static partial System.Int32 PARTNER_CHALLENGE_COUNT { get; set; } 
 */
 
             /// <summary>
@@ -460,9 +462,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<DefaultMapSignId>k__BackingField", "System.String")]
-            public static partial nint DEFAULT_MAP_SIGN_ID { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<DefaultMapSignId>k__BackingField", "System.String")]
+           public static partial nint DEFAULT_MAP_SIGN_ID { get; set; } 
 */
 
             /// <summary>
@@ -470,9 +472,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleStartPP>k__BackingField", "System.Single")]
-            public static partial System.Single BATTLE_START_PP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleStartPP>k__BackingField", "System.Single")]
+           public static partial System.Single BATTLE_START_PP { get; set; } 
 */
 
             /// <summary>
@@ -480,9 +482,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleAtkPP>k__BackingField", "System.Single")]
-            public static partial System.Single BATTLE_ATK_PP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleAtkPP>k__BackingField", "System.Single")]
+           public static partial System.Single BATTLE_ATK_PP { get; set; } 
 */
 
             /// <summary>
@@ -490,9 +492,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleDefPP>k__BackingField", "System.Single")]
-            public static partial System.Single BATTLE_DEF_PP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleDefPP>k__BackingField", "System.Single")]
+           public static partial System.Single BATTLE_DEF_PP { get; set; } 
 */
 
             /// <summary>
@@ -500,9 +502,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleSkillPP>k__BackingField", "System.Single")]
-            public static partial System.Single BATTLE_SKILL_PP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleSkillPP>k__BackingField", "System.Single")]
+           public static partial System.Single BATTLE_SKILL_PP { get; set; } 
 */
 
             /// <summary>
@@ -510,9 +512,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PPBarCap>k__BackingField", "System.Single")]
-            public static partial System.Single PP_BAR_CAP { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<PPBarCap>k__BackingField", "System.Single")]
+           public static partial System.Single PP_BAR_CAP { get; set; } 
 */
 
             /// <summary>
@@ -520,9 +522,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ActionBarLength>k__BackingField", "System.Single")]
-            public static partial System.Single ACTION_BAR_LENGTH { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<ActionBarLength>k__BackingField", "System.Single")]
+           public static partial System.Single ACTION_BAR_LENGTH { get; set; } 
 */
 
             /// <summary>
@@ -530,9 +532,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MissionFollowLimit>k__BackingField", "System.Int32")]
-            public static partial System.Int32 MISSION_FOLLOW_LIMIT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<MissionFollowLimit>k__BackingField", "System.Int32")]
+           public static partial System.Int32 MISSION_FOLLOW_LIMIT { get; set; } 
 */
 
             /// <summary>
@@ -540,9 +542,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["mscorlib.dll"."System"."String"]
             /// </summary>
             /// <returns>class System.String</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<DefaultTerrainId>k__BackingField", "System.String")]
-            public static partial nint DEFAULT_TERRAIN_ID { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<DefaultTerrainId>k__BackingField", "System.String")]
+           public static partial nint DEFAULT_TERRAIN_ID { get; set; } 
 */
 
             /// <summary>
@@ -550,9 +552,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<TavernFoodBuyLimit>k__BackingField", "System.Int32")]
-            public static partial System.Int32 TAVERN_FOOD_BUY_LIMIT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<TavernFoodBuyLimit>k__BackingField", "System.Int32")]
+           public static partial System.Int32 TAVERN_FOOD_BUY_LIMIT { get; set; } 
 */
 
             /// <summary>
@@ -560,9 +562,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<TavernWineBuyLimit>k__BackingField", "System.Int32")]
-            public static partial System.Int32 TAVERN_WINE_BUY_LIMIT { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<TavernWineBuyLimit>k__BackingField", "System.Int32")]
+           public static partial System.Int32 TAVERN_WINE_BUY_LIMIT { get; set; } 
 */
 
             /// <summary>
@@ -570,9 +572,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Single"]
             /// </summary>
             /// <returns>struct System.Single</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleSuccessAddAttribute>k__BackingField", "System.Single")]
-            public static partial System.Single BATTLE_SUCCESS_ADD_ATTRIBUTE { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("<BattleSuccessAddAttribute>k__BackingField", "System.Single")]
+           public static partial System.Single BATTLE_SUCCESS_ADD_ATTRIBUTE { get; set; } 
 */
 
             /// <summary>
@@ -580,9 +582,9 @@ namespace Maple.YuanZhiSheng.Metadata
             /// class ["Assembly-CSharp.dll"."DB"."GameConfig"]
             /// </summary>
             /// <returns>class DB.GameConfig</returns>
-             /*
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("config", "DB.GameConfig")]
-            public static partial nint CONFIG { get; set; } 
+            /*
+           [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("config", "DB.GameConfig")]
+           public static partial nint CONFIG { get; set; } 
 */
         }
 

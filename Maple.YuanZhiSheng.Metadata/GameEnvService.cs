@@ -138,7 +138,25 @@ namespace Maple.YuanZhiSheng.Metadata
 
         IEnumerable<GameSwitchDisplayDTO> GetRoleInfo(PlayerModel.Ptr_PlayerModel playerModel, RoleInfo.Ptr_RoleInfo roleInfo, PMonoString roleId)
         {
+            if (roleId.AsReadOnlySpan().SequenceEqual(this.Cache.MainPlayerId.AsReadOnlySpan()))
+            {
+                yield break;
+            }
+            foreach (var item in roleInfo.EnumRoleInfoReader())
+            {
+                var boolType = Boolean.FalseString.Equals(item.Value, StringComparison.OrdinalIgnoreCase) ||
+                    Boolean.TrueString.Equals(item.Key, StringComparison.OrdinalIgnoreCase);
+                yield return new GameSwitchDisplayDTO
+                {
+                    ObjectId = item.Key,
+                    DisplayCategory = boolType ? EnumGameSwitchUIType.Switches.ToString() : EnumGameSwitchUIType.TextEditor.ToString(),
+                    DisplayName = item.Name,
+                    DisplayDesc = item.Description,
+                    ContentValue = item.Value,
+                    // DisplayImage = item.Description,
 
+                };
+            }
         }
         IEnumerable<GameSwitchDisplayDTO> GetPartnerInfo(PlayerModel.Ptr_PlayerModel playerModel, RoleInfo.Ptr_RoleInfo roleInfo, PMonoString roleId)
         {
@@ -150,7 +168,7 @@ namespace Maple.YuanZhiSheng.Metadata
                 yield return new GameSwitchDisplayDTO
                 {
                     ObjectId = att.ObjectId,
-                    DisplayCategory = att.DisplayCategory,
+                    DisplayCategory = EnumGameSwitchUIType.TextEditor.ToString(),
                     DisplayName = att.DisplayName,
                     DisplayDesc = att.DisplayDesc,
                     DisplayImage = att.DisplayImage,
@@ -166,7 +184,8 @@ namespace Maple.YuanZhiSheng.Metadata
                 yield return new GameSwitchDisplayDTO
                 {
                     ObjectId = att.ObjectId,
-                    DisplayCategory = att.DisplayCategory,
+                    DisplayCategory = EnumGameSwitchUIType.TextEditor.ToString(),
+
                     DisplayName = att.DisplayName,
                     DisplayDesc = att.DisplayDesc,
                     DisplayImage = att.DisplayImage,
@@ -177,11 +196,14 @@ namespace Maple.YuanZhiSheng.Metadata
         }
         IEnumerable<GameSwitchDisplayDTO> GetMainPlay(PlayerModel.Ptr_PlayerModel playerModel, RoleInfo.Ptr_RoleInfo roleInfo, PMonoString roleId)
         {
-
+            if (!roleId.AsReadOnlySpan().SequenceEqual(this.Cache.MainPlayerId.AsReadOnlySpan()))
+            {
+                yield break;
+            }
         }
 
 
-        GameCharacterStatusDTO GetCharacterStatus(GameCharacterObjectDTO characterObjectDTO)
+        public GameCharacterStatusDTO GetCharacterStatus(GameCharacterObjectDTO characterObjectDTO)
         {
             var res = GetCharacterRes(characterObjectDTO);
             RoleData.Ptr_RoleData roleData = new(res.ObjectPointer);
@@ -200,7 +222,10 @@ namespace Maple.YuanZhiSheng.Metadata
 
             };
         }
-        GameCharacterStatusDTO UpdateCharacterStatus(GameCharacterModifyDTO characterModifyDTO) { }
+        public GameCharacterStatusDTO UpdateCharacterStatus(GameCharacterModifyDTO characterModifyDTO) 
+        {
+            return GetCharacterStatus(characterModifyDTO);
+        }
         #endregion
 
         #region Model
