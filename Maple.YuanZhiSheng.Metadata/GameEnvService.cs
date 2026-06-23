@@ -148,9 +148,9 @@ namespace Maple.YuanZhiSheng.Metadata
                     Boolean.TrueString.Equals(item.Key, StringComparison.OrdinalIgnoreCase);
                 yield return new GameSwitchDisplayDTO
                 {
-                    ObjectId = item.Key,
-                    UIType = (int)(boolType ? EnumGameSwitchUIType.Switches  : EnumGameSwitchUIType.TextEditor),
-                    DisplayName = item.Name,
+                    ObjectId = $"{EnumCharacterStatusCategory.基础}*{item.Key}",
+                    UIType = (int)(boolType ? EnumGameSwitchUIType.Switches : EnumGameSwitchUIType.TextEditor),
+                    DisplayName = $"{EnumCharacterStatusCategory.基础}*{item.Name}",
                     DisplayDesc = item.Description,
                     ContentValue = item.Value,
                     // DisplayImage = item.Description,
@@ -167,9 +167,9 @@ namespace Maple.YuanZhiSheng.Metadata
                 var t = attDatas.ElementAtOrDefault(pAtt.IDX);
                 yield return new GameSwitchDisplayDTO
                 {
-                    ObjectId = att.ObjectId,
+                    ObjectId = $"{EnumCharacterStatusCategory.成长}*{att.ObjectId}",
                     UIType = (int)EnumGameSwitchUIType.TextEditor,
-                    DisplayName = $"成长.{att.DisplayName}",
+                    DisplayName = $"{EnumCharacterStatusCategory.成长}*{att.DisplayName}",
                     DisplayDesc = att.DisplayDesc,
                     DisplayImage = att.DisplayImage,
                     DecimalValue = new decimal(t),
@@ -183,10 +183,10 @@ namespace Maple.YuanZhiSheng.Metadata
                 var t = battleDatas.ElementAtOrDefault(pAtt.IDX);
                 yield return new GameSwitchDisplayDTO
                 {
-                    ObjectId = att.ObjectId,
+                    ObjectId = $"{EnumCharacterStatusCategory.战斗}*{att.ObjectId}",
                     UIType = (int)EnumGameSwitchUIType.TextEditor,
 
-                    DisplayName = $"战斗.{att.DisplayName}",
+                    DisplayName = $"{EnumCharacterStatusCategory.成长}*{att.DisplayName}",
                     DisplayDesc = att.DisplayDesc,
                     DisplayImage = att.DisplayImage,
                     DecimalValue = new decimal(t),
@@ -215,14 +215,14 @@ namespace Maple.YuanZhiSheng.Metadata
                 ObjectId = characterObjectDTO.CharacterId,
                 CharacterAttributes = [
                     ..GetPartnerInfo(playerModel, roleInfo, id),
-                    ..GetMainPlay(playerModel, roleInfo, id ),
+                    .. ( res.DisplayCategory== nameof(PartnerData)? GetMainPlay(playerModel, roleInfo, id ):[]),
                     ..GetRoleInfo(playerModel, roleInfo ,id),
                     ]
 
 
             };
         }
-        public GameCharacterStatusDTO UpdateCharacterStatus(GameCharacterModifyDTO characterModifyDTO) 
+        public GameCharacterStatusDTO UpdateCharacterStatus(GameCharacterModifyDTO characterModifyDTO)
         {
             return GetCharacterStatus(characterModifyDTO);
         }
@@ -261,5 +261,12 @@ namespace Maple.YuanZhiSheng.Metadata
         }
         #endregion
 
+    }
+
+    public enum EnumCharacterStatusCategory
+    {
+        成长 = 0,
+        基础 = 1,
+        战斗 = 2,
     }
 }

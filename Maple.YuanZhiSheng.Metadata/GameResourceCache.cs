@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Xml.Linq;
 using static Maple.YuanZhiSheng.Metadata.LocalizationManager;
@@ -29,15 +30,30 @@ namespace Maple.YuanZhiSheng.Metadata
         public required GameObjectResource[] PlayerAttributeDatas { get; init; }
         public required GameObjectResource[] BattleAttributeDatas { get; init; }
         public required GameObjectResource[] PlayerPersonalityDatas { get; init; }
-        public required PMonoString MainPlayerId { get; init;  }
+        public required PMonoString MainPlayerId { get; init; }
         public required WinManager.Ptr_WinManager Ptr_WinManager { get; init; }
+
+        private static void WaitForGameReady()
+        {
+            SpinWait.SpinUntil(() => GameConfig.Ptr_GameConfig.MAIN_PLAYER_ID.Valid());
+            SpinWait.SpinUntil(() => MC.Ptr_MC._INSTANCE.IsNotNull());
+            SpinWait.SpinUntil(() => LocalizationManager.Ptr_LocalizationManager._INSTANCE.IsNotNull());
+            SpinWait.SpinUntil(() => AttributeData.Ptr_AttributeData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => BattleAttributeData.Ptr_BattleAttributeData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => CareerData.Ptr_CareerData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => PlayerDesignationData.Ptr_PlayerDesignationData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => PersonalityData.Ptr_PersonalityData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => ItemData.Ptr_ItemData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => BattleSkillData.Ptr_BattleSkillData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => RoleData.Ptr_RoleData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => PartnerData.Ptr_PartnerData.LIST.IsNotNull());
+            SpinWait.SpinUntil(() => WinManager.Ptr_WinManager._INSTANCE.IsNotNull());
+
+        }
 
         public static GameResourceCache Create(GameMetadataContext context)
         {
-            SpinWait.SpinUntil(() => GameConfig.Ptr_GameConfig.MAIN_PLAYER_ID.Valid());
-
-            SpinWait.SpinUntil(() => MC.Ptr_MC._INSTANCE.IsNotNull());
-            // SpinWait.SpinUntil(() => LocalizationManager.Ptr_LocalizationManager._INSTANCE.IsNotNull());
+            WaitForGameReady();
 
 
             Ptr_LocalizationManager localizationManager = LocalizationManager.Ptr_LocalizationManager._INSTANCE;
@@ -72,7 +88,7 @@ namespace Maple.YuanZhiSheng.Metadata
                 context.Log(reg);
             }
             GameObjectDisplayDTO[] gameObjects = [.. LoadAllItemData(localizationManager)];
-            
+
             GameCurrencyResource[] currencyDatas = [.. gameObjects.Where(p => p is GameCurrencyResource).Cast<GameCurrencyResource>()];
             foreach (var reg in currencyDatas)
             {
@@ -89,8 +105,8 @@ namespace Maple.YuanZhiSheng.Metadata
             {
                 context.Log(reg);
             }
-
-            GameCharacterResource[] roleDatas = [.. LoadAllRoleData(localizationManager)];
+            var mainPlayerId = GameConfig.Ptr_GameConfig.MAIN_PLAYER_ID;
+            GameCharacterResource[] roleDatas = [.. LoadAllRoleData(localizationManager, mainPlayerId)];
             foreach (var reg in roleDatas)
             {
                 context.Log(reg);
@@ -104,10 +120,10 @@ namespace Maple.YuanZhiSheng.Metadata
 
                 PlayerAttributeDatas = playerAttributeDatas,
                 PlayerPersonalityDatas = playerPersonalityDatas,
-                BattleAttributeDatas= battleAttributeDatas,
+                BattleAttributeDatas = battleAttributeDatas,
 
                 Ptr_WinManager = WinManager.Ptr_WinManager._INSTANCE,
-                MainPlayerId = GameConfig.Ptr_GameConfig.MAIN_PLAYER_ID,
+                MainPlayerId = mainPlayerId,
             };
             return cache;
         }
@@ -308,8 +324,8 @@ namespace Maple.YuanZhiSheng.Metadata
                         DisplayDesc = desc,
                         DisplayName = name,
                     };
-                }    
-                
+                }
+
             }
 
             static bool IsInventory(ItemType itemType, ConsumeItemSubType itemSubType)
@@ -331,7 +347,7 @@ namespace Maple.YuanZhiSheng.Metadata
                     ItemType.SkillBook => true,
                     _ => false,
                 };
-  
+
             }
 
         }
@@ -363,14 +379,14 @@ namespace Maple.YuanZhiSheng.Metadata
             }
 
         }
-        static IEnumerable<GameCharacterResource> LoadAllRoleData(Ptr_LocalizationManager localizationManager)
+        static IEnumerable<GameCharacterResource> LoadAllRoleData(Ptr_LocalizationManager localizationManager, PMonoString mainPlayerId)
         {
             PMonoString[] partnerList = [.. LoadAllPartnerData()];
 
             foreach (var role in RoleData.Ptr_RoleData.LIST.AsEnumerable())
             {
                 var id = role.ID;
-                var partner = partnerList.Where(p => p.AsReadOnlySpan().SequenceEqual(id.AsReadOnlySpan())).Any();
+                var partner = partnerList.Any(p => p.AsReadOnlySpan().SequenceEqual(id.AsReadOnlySpan())) || id.AsReadOnlySpan().SequenceEqual(mainPlayerId.AsReadOnlySpan());
                 // var idx = role.IDX;
                 var name = localizationManager.GetText(role.NAME);
                 var desc = localizationManager.GetText(role.TAG);
