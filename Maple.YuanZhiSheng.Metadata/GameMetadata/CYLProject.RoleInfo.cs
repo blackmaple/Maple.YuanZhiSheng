@@ -32,7 +32,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// struct ["mscorlib.dll"."System"."Int32"]
             /// </summary>
             /// <returns>struct System.Int32</returns>
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*等级","人物等级")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*等级","人物等级")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Level", "System.Int32")]
             public partial System.Int32 LEVEL { get; set; }
 
@@ -43,7 +43,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Int32</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*经验", "人物经验")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*经验", "人物经验")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Exp", "System.Int32")]
             public partial System.Int32 EXP { get; set; }
 
@@ -54,7 +54,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Int32</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*好感度", "人物好感度")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*好感度", "人物好感度")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("Favorability", "System.Int32")]
             public partial System.Int32 FAVORABILITY { get; set; }
 
@@ -65,7 +65,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Boolean</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*入队", "人物入队状态")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*入队", "人物入队状态")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("InTeam", "System.Boolean")]
             public partial System.Boolean IN_TEAM { get; set; }
 
@@ -76,7 +76,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Int32</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*天赋", "人物天赋点数")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*天赋", "人物天赋点数")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("TotalTalentPoint", "System.Int32")]
             public partial System.Int32 TOTAL_TALENT_POINT { get; set; }
 
@@ -87,7 +87,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Int32</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*交谈", "人物交谈点数")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*交谈", "人物交谈点数")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ChatRest", "System.Int32")]
             public partial System.Int32 CHAT_REST { get; set; }
 
@@ -98,7 +98,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Int32</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*赠送", "人物赠送点数")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*赠送", "人物赠送点数")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("SendGiftFreeRest", "System.Int32")]
             public partial System.Int32 SEND_GIFT_FREE_REST { get; set; }
 
@@ -109,7 +109,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Int32</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*挑战", "人物挑战点数")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*挑战", "人物挑战点数")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ChallengeRest", "System.Int32")]
             public partial System.Int32 CHALLENGE_REST { get; set; }
 
@@ -120,7 +120,7 @@ namespace Maple.YuanZhiSheng.Metadata
             /// </summary>
             /// <returns>struct System.Int32</returns>
 
-            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("属性*挑战阶段", "人物挑战阶段")]
+            [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyCollection("基础*挑战阶段", "人物挑战阶段")]
             [Maple.MonoGameAssistant.MetadataExtensions.MetadataGenerator.ClassPropertyMetadataAttribute("ChallengeStage", "System.Int32")]
             public partial System.Int32 CHALLENGE_STAGE { get; set; } 
 

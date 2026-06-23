@@ -149,7 +149,7 @@ namespace Maple.YuanZhiSheng.Metadata
                 yield return new GameSwitchDisplayDTO
                 {
                     ObjectId = item.Key,
-                    DisplayCategory = boolType ? EnumGameSwitchUIType.Switches.ToString() : EnumGameSwitchUIType.TextEditor.ToString(),
+                    UIType = (int)(boolType ? EnumGameSwitchUIType.Switches  : EnumGameSwitchUIType.TextEditor),
                     DisplayName = item.Name,
                     DisplayDesc = item.Description,
                     ContentValue = item.Value,
@@ -168,8 +168,8 @@ namespace Maple.YuanZhiSheng.Metadata
                 yield return new GameSwitchDisplayDTO
                 {
                     ObjectId = att.ObjectId,
-                    DisplayCategory = EnumGameSwitchUIType.TextEditor.ToString(),
-                    DisplayName = att.DisplayName,
+                    UIType = (int)EnumGameSwitchUIType.TextEditor,
+                    DisplayName = $"成长.{att.DisplayName}",
                     DisplayDesc = att.DisplayDesc,
                     DisplayImage = att.DisplayImage,
                     DecimalValue = new decimal(t),
@@ -184,9 +184,9 @@ namespace Maple.YuanZhiSheng.Metadata
                 yield return new GameSwitchDisplayDTO
                 {
                     ObjectId = att.ObjectId,
-                    DisplayCategory = EnumGameSwitchUIType.TextEditor.ToString(),
+                    UIType = (int)EnumGameSwitchUIType.TextEditor,
 
-                    DisplayName = att.DisplayName,
+                    DisplayName = $"战斗.{att.DisplayName}",
                     DisplayDesc = att.DisplayDesc,
                     DisplayImage = att.DisplayImage,
                     DecimalValue = new decimal(t),
